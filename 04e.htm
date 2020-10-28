@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <LINK rel="stylesheet" type="text/css" href=student.css>
+    <SCRIPT language="JavaScript" src=../common.js></SCRIPT>
+    <SCRIPT language="JavaScript" src=./msed.js></SCRIPT>
+    <TITLE>Приёмы редактирования (практикум)</TITLE>
+<STYLE>
+.errmark
+{
+  text-decoration: underline;
+  font-weight:bold;
+  color:red;
+  background:#EEE5DB;
+}
+.errmess
+{
+  background:#EEE5DB;
+  padding:5px;
+  width:200px; height:50px;
+
+  /* выпуклая граница */
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+}
+</STYLE>
+<SCRIPT language=JavaScript>
+<!--
+
+function iniTaskRU()
+{
+  document.all['msed1'].value=sourse1_;
+  document.all['inerr1'].innerHTML='';
+
+  document.all['msed2'].value=sourse2_;
+  document.all['inerr2'].innerHTML='';
+
+  document.all['msed3'].value=sourse3_;
+  document.all['inerr3'].innerHTML='';
+
+  document.all['msed4'].value=sourse4_;
+  document.all['inerr4'].innerHTML='';
+}
+
+
+var sourse1 =
+'Серый мышонок Тарасик\r\n'+
+'Продал свой белый матрасик,\r\n'+
+'Продал свой стол и комод\r\n'+
+'И устремился в поход.\r\n'+
+'\r\n'+
+'В лодке из корочки дынной\r\n'+
+'Плыл он по речке пустынной,\r\n'+
+'Плыл, догоняя паром,\r\n'+
+'Греб лебединым пером.\r\n'+
+'\r\n'+
+'Вдруг непогода завыла,\r\n'+
+'Стало не видно залива,\r\n'+
+'Дынная корка трещит,\r\n'+
+'Серый мышонок пищит:\r\n'+
+'\r\n'+
+'"Все-таки теплая норка\r\n'+
+'Лучше, чем дынная корка...\r\n'+
+'Ох! Ай-ай-ай! Ой-ой-ой!\r\n'+
+'Я возвращаюсь домой!"\r\n'+
+'\r\n'+
+'Серый мышонок Тарасик\r\n'+
+'Выкупил белый матрасик,\r\n'+
+'Выкупил стол и комод,\r\n'+
+'Тихо и мирно живет.\r\n'+
+'\r\n'+
+'Но вечерами Тарасик\r\n'+
+'Думает: "Если бы разик,\r\n'+
+'Если бы раз или два\r\n'+
+'Мне увидать Острова!.."\r\n'+
+'\r\n'+
+'Снова мышонок Тарасик\r\n'+
+'Продал свой белый матрасик,\r\n'+
+'Продал и стол, и комод,\r\n'+
+'Стал догонять пароход...\r\n'+
+'\r\n'+
+'Вновь непогода завыла!\r\n'+
+'Снова не видно залива!\r\n'+
+'Снова наш бедный герой\r\n'+
+'Стал возвращаться домой.\r\n'+
+'\r\n'+
+'Снова упрямый Тарасик\r\n'+
+'Выкупил белый матрасик,\r\n'+
+'Выкупил стол и комод.\r\n'+
+'Хлебную корку грызет...\r\n'+
+'\r\n'+
+'Но временами Тарасик\r\n'+
+'Думает: "Только бы разик,\r\n'+
+'Только б разок или два\r\n'+
+'Мне увидать Острова!.."\r\n';
+
+var sourse1_ =
+'Серый мышонок Тарасик Продал свой белый матрасик, Продал свой стол и комод И устремился в поход. В лодке из корочки дынной Плыл он по речке пустынной, Плыл, догоняя паром, Греб лебединым пером.\r\n'+
+'Вдруг непогода завыла, Стало не видно залива, Дынная корка трещит, Серый мышонок пищит: "Все-таки теплая норка Лучше, чем дынная корка... Ох! Ай-ай-ай! Ой-ой-ой! Я возвращаюсь домой!" Серый мышонок Тарасик Выкупил белый матрасик,\r\n'+
+'Выкупил стол и комод, Тихо и мирно живет. Но вечерами Тарасик Думает: "Если бы разик, Если бы раз или два Мне увидать Острова!.." Снова мышонок Тарасик Продал свой белый матрасик, Продал и стол, и комод, Стал догонять пароход...\r\n'+
+'Вновь непогода завыла! Снова не видно залива! Снова наш бедный герой Стал возвращаться домой. Снова упрямый Тарасик Выкупил белый матрасик, Выкупил стол и комод. Хлебную корку грызет... Но временами Тарасик Думает: "Только бы разик,\r\n'+
+'Только б разок или два Мне увидать Острова!.."';
+
+var sourse2 =
+'По крутой тропинке горной\r\n'+
+'Шел домой барашек черный\r\n'+
+'И на мостике горбатом\r\n'+
+'Повстречался с белым братом.\r\n'+
+'\r\n'+
+'И сказал барашек белый:\r\n'+
+'"Братец, вот какое дело:\r\n'+
+'Здесь вдвоем нельзя пройти,\r\n'+
+'Ты стоишь мне на пути".\r\n'+
+'\r\n'+
+'Черный брат ответил: "Ме,\r\n'+
+'Вы в своем, баран, уме?\r\n'+
+'Пусть мои отсохнут ноги,\r\n'+
+'Если я сойду с дороги!"\r\n'+
+'\r\n'+
+'Помотал один рогами,\r\n'+
+'Уперся другой ногами...\r\n'+
+'Как рогами ни крути,\r\n'+
+'А вдвоем нельзя пройти.\r\n'+
+'\r\n'+
+'Сверху солнышко печет,\r\n'+
+'А внизу река течет.\r\n'+
+'В этой речке утром рано\r\n'+
+'Утонули два барана.\r\n';
+
+var sourse2_ =
+'По крутой \r\n'+
+'тропинке горной\r\n'+
+'Шел домой \r\n'+
+'барашек черный\r\n'+
+'И на мостике \r\n'+
+'горбатом\r\n'+
+'Повстречался \r\n'+
+'с белым братом.\r\n'+
+'\r\n'+
+'И сказал \r\n'+
+'барашек белый:\r\n'+
+'"Братец, \r\n'+
+'вот какое дело:\r\n'+
+'Здесь вдвоем \r\n'+
+'нельзя пройти,\r\n'+
+'Ты стоишь мне \r\n'+
+'на пути".\r\n'+
+'\r\n'+
+'Черный \r\n'+
+'брат \r\n'+
+'ответил: \r\n'+
+'"Ме,\r\n'+
+'Вы в своем, баран, уме?\r\n'+
+'Пусть \r\n'+
+'мои отсохнут ноги,\r\n'+
+'Если я сойду \r\n'+
+'с дороги!"\r\n'+
+'\r\n'+
+'Помотал \r\n'+
+'один \r\n'+
+'рогами,\r\n'+
+'Уперся другой ногами...\r\n'+
+'Как рогами \r\n'+
+'ни крути,\r\n'+
+'А \r\n'+
+'вдвоем нельзя пройти.\r\n'+
+'\r\n'+
+'Сверху солнышко \r\n'+
+'печет,\r\n'+
+'А внизу река \r\n'+
+'течет.\r\n'+
+'В этой речке \r\n'+
+'утром рано\r\n'+
+'Утонули \r\n'+
+'два \r\n'+
+'барана.\r\n';
+
+var sourse3 =
+
+'Муха, Муха-Цокотуха,\r\n'+
+'Позолоченное брюхо!\r\n'+
+'\r\n'+
+'Муха по полю пошла,\r\n'+
+'Муха денежку нашла.\r\n'+
+'\r\n'+
+'Пошла Муха на базар\r\n'+
+'И купила самовар:\r\n'+
+'\r\n'+
+'"Приходите, тараканы,\r\n'+
+'Я вас чаем угощу!"\r\n'+
+'\r\n'+
+'Тараканы прибегали,\r\n'+
+'Все стаканы выпивали,\r\n'+
+'\r\n'+
+'А букашки -\r\n'+
+'По три чашки\r\n'+
+'С молоком\r\n'+
+'И крендельком:\r\n'+
+'Нынче Муха-Цокотуха\r\n'+
+'Именинница!\r\n';
+
+var sourse3_ =
+
+'Муха, красавица наша, Муха-Цокотуха,\r\n'+
+'Позолоченное голова и брюхо!\r\n'+
+'\r\n'+
+'\r\n'+
+'\r\n'+
+'\r\n'+
+'Муха по полю быстро пошла,\r\n'+
+'Муха денежку нашла.\r\n'+
+'\r\n'+
+'(Наверное, она нашла не одну\r\n'+
+'денежку, а много.)\r\n'+
+'\r\n'+
+'\r\n'+
+'\r\n'+
+'Пошла Муха на базар\r\n'+
+'(Базар был очень далеко, и муха устала.)\r\n'+
+'И купила самовар, который вмещал ведро воды:\r\n'+
+'\r\n'+
+'"Приходите, тараканы, а также муравьи,\r\n'+
+'Клопы, жуки, кузнечики,\r\n'+
+'Я вас чаем угощу!"\r\n'+
+'\r\n'+
+'\r\n'+
+'Тараканы прибегали со всех ног,\r\n'+
+'Все стаканы выпивали со всех рук,\r\n'+
+'\r\n'+
+'А букашки -\r\n'+
+'По три чашки\r\n'+
+'С молоком\r\n'+
+'И крендельком:\r\n'+
+'Нынче Муха-Цокотуха\r\n'+
+'Именинница!\r\n';
+
+var sourse4 =
+'Наша Таня громко плачет:\r\n'+
+'Уронила в речку мячик.\r\n'+
+'- Тише, Танечка, не плачь:\r\n'+
+'Не утонет в речке мяч.\r\n';
+var sourse4_ = '';
+
+
+function test1RU()
+{
+   document.all['inerr1'].innerHTML = showErrLineRU(document.all['msed1'].value,sourse1, true);
+
+}
+
+function test2RU()
+{
+   document.all['inerr2'].innerHTML = showErrLineRU(document.all['msed2'].value,sourse2, true);
+
+}
+
+function test3RU()
+{
+   document.all['inerr3'].innerHTML = showErrLineRU(document.all['msed3'].value,sourse3, true);
+
+}
+
+function test4RU()
+{
+   document.all['inerr4'].innerHTML = showErrLineRU(document.all['msed4'].value,sourse4, true);
+
+}
+
+//-->
+</SCRIPT>
+  </HEAD>
+
+  <BODY bgcolor=white text=black link=blue alink=red vlink=purple
+        onload = "iniTaskRU()">
+
+    <SPAN style="
+          position:absolute; left:0px; top:0px;
+          height:99px; width:100%; z-index:-1;
+          background: repeat-y rgb(0,204,255) url(../pic/fon.gif);">
+          &nbsp;
+    </SPAN>
+
+    <A href=04.htm><IMG style="position:absolute;left:40px;top:10px;"
+         src=./pic/04.gif width=400 height=35 border=0
+         hspace=0 vspace=0 alt='Приёмы редактирования'></A>
+
+
+    <TABLE style="position:absolute;left:0px;top:40px;"
+           border=0 cellspacing=0 cellpadding=0 width=100%>
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD align=right>
+          <IMG src=./pic/r.gif width=244 height=51 border=0
+               vspace=0 hspace=10 alt="">
+        </TD>
+      </TR>
+
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD colspan=2
+          ><IMG src=../pic/label.gif width=550 height=15 border=0
+               vspace=0 hspace=0 alt="Регистрационная метка"
+        ></TD>
+      </TR>
+    </TABLE>
+
+    <IMG style="position:absolute;left:87px;top:50px"
+         src=./pic/e.gif width=148 height=21 border=0
+         hspace=0 vspace=0 alt="Практикум">
+
+    <IMG style="position:absolute; left:5px; top:10px;"
+         src=../pic/robotru.gif width=18 height=152 border=0
+         alt="">
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD colspan=2>
+          <IMG src=../pic/empty.gif width=1 height=110 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <IMG src=../pic/empty.gif width=72 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD>
+
+      <P>
+        <IMG class=tasks src=../pic/task3.gif width=200 height=68 border=0
+              hspace=0 alt="Практикум">
+
+      <H2>Ножницы</H2>
+
+      <H3>Задание 1</H3>
+
+      <P>
+Разрежьте текст так, чтобы стихотворение Новеллы Матвеевой
+&#147;Путешественник&#148; приняло обычный для стихов вид.
+
+      <P>
+Каждая стихотворная строка должна начинаться с первой позиции. После
+каждых четырех строк должна идти ровно одна пустая строка.
+
+      <P>
+Для быстрого движения по словам используйте аккорды
+<NOBR><KBD>Ctrl</KBD>+<KBD>Вправо</KBD></NOBR>  и
+<NOBR><KBD>Ctrl</KBD>+<KBD>Влево</KBD>.</NOBR>
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed1'].value=sourse1_;document.all['inerr1'].innerHTML=''">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed1 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+      
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+      <H2>Клей</H2>
+
+      <H3>Задание 2</H3>
+
+      <P>
+Склейте порезанные строчки так, чтобы стихотворение Сергея Михалкова
+&#147;Бараны&#148; приняло обычный для стихов вид.
+
+      <P>
+Каждая стихотворная строка должна начинаться с первой позиции. После
+каждых четырех строк должна идти ровно одна пустая строка.
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed2'].value=sourse2_;document.all['inerr2'].innerHTML=''">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed2 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+     
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+
+      <H2>Удаление</H2>
+
+      <H3>Задание 3</H3>
+
+      <P>
+Удалите лишние фрагменты из начала сказки Корнея Чуковского. Каждые две
+стихотворные строки разделяются одной пустой строкой. Последние шесть
+строк записываются слитно.
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed3'].value=sourse3_;document.all['inerr3'].innerHTML=''">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed3 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+      
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+      <H2>Набор текста</H2>
+
+
+      <H3>Задание 4</H3>
+
+      <P>
+Наберите стихотворение Агнии Барто &#147;Мячик&#148;.
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed4'].value=sourse4_;document.all['inerr4'].innerHTML=''">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<IMG src=./pic/0401e.gif width=290 height=111 border=0 hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed4 rows=6 cols=44 wrap=off>
+</TEXTAREA>
+      <DIV class=errmess>
+        Покажите результат преподавателю.</DIV></NOBR>
+      </DIV>
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+
+
+      <P>
+      <IMG style="position:relative; left:-62px;"
+           src=../pic/podval.gif width=490 height=15 border=0
+           alt="Азы информатики RU 2000/2002 &copy; А.А.Дуванов">
+
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <NOBR>
+          <IMG src=../pic/empty.gif width=22 height=1 border=0
+               alt="" hspace=0 vspace=0>
+          <IMG src=../pic/up.gif width=35 height=35 border=0
+               alt=Вверх hspace=0 vspace=0
+               onclick="scroll(0,0)"
+               onmouseover="this.src='../pic/up_.gif'"
+               onmouseout="this.src='../pic/up.gif'">
+          </NOBR>
+        </TD>
+
+        <TD>
+      <NOBR>
+      <A href=index.htm><IMG src=../pic/home.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt="Оглавление книги"
+           onmouseover="this.src='../pic/home_.gif'"
+           onmouseout="this.src='../pic/home.gif'"></A>
+
+      <A href=04.htm><IMG src=../pic/left.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt='Урок 4. Приёмы редактирования'
+           onmouseover="this.src='../pic/left_.gif'"
+           onmouseout="this.src='../pic/left.gif'"></A>
+
+        <A href=mailto:kurs@robotland.users.botik.ru
+           onmouseover="letter.src = '../pic/letter_.gif'"
+           onmouseout ="letter.src = '../pic/letter.gif'">
+           <IMG name=letter
+                src=../pic/letter.gif width=50 height=40
+                border=0 alt="Письмо автору"></A>
+
+        <A href="javascript:void(0)"
+           onmouseover="copyr.src ='../pic/copyr_.gif'"
+           OnMouseOut ="copyr.src = '../pic/copyr.gif'"
+           onclick="CopyrRU('../')">
+           <IMG name=copyr
+                src=../pic/copyr.gif  width=50 height=40
+                border=0 alt="Об авторах"></A>
+      </NOBR>
+     </TD>
+     </TR>
+     </TABLE>
+
+  </BODY>
+</HTML>

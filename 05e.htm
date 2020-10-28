@@ -1,0 +1,713 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <LINK rel="stylesheet" type="text/css" href=student.css>
+    <SCRIPT language="JavaScript" src=../common.js></SCRIPT>
+    <SCRIPT language="JavaScript" src=./msed.js></SCRIPT>
+    <TITLE>Копирование (практикум)</TITLE>
+<STYLE>
+.place
+{
+  border-style: solid;
+  border-width: 1px;
+  background:#EEE5DB;
+  margin:5px;
+  padding:5px;
+}
+.errmark
+{
+  text-decoration: underline;
+  font-weight:bold;
+  color:red;
+  background:#EEE5DB;
+}
+.errmess
+{
+  background:#EEE5DB;
+  padding:5px;
+  width:200px; height:50px;
+
+  /* выпуклая граница */
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+}
+</STYLE>
+<SCRIPT language=JavaScript>
+<!--
+
+function iniTaskRU()
+{
+  document.all['msed1'].value=sourse1_;
+  document.all['inerr1'].innerHTML='';
+
+  document.all['msed2'].value=sourse2_;
+  document.all['inerr2'].innerHTML='';
+
+  document.all['msed3'].value=sourse3_;
+  document.all['inerr3'].innerHTML='';
+
+  //document.all['msed4'].value=sourse4_;
+  //document.all['inerr4'].innerHTML='';
+
+  document.all['msed5'].value=sourse5_;
+  document.all['inerr5'].innerHTML='';
+
+  document.all['msed6'].value=sourse6_;
+  document.all['inerr6'].innerHTML='';
+}
+
+
+var sourse1 =
+'ОЧЕНЬ ВКУСНЫЙ ПИРОГ\r\n'+
+'\r\n'+
+'Я захотел устроить бал,\r\n'+
+'Я захотел устроить бал,\r\n'+
+'Я захотел устроить бал,\r\n'+
+'И я гостей к себе позвал.\r\n'+
+'\r\n'+
+'Купил муку, купил творог,\r\n'+
+'Купил муку, купил творог,\r\n'+
+'Купил муку, купил творог,\r\n'+
+'Испек рассыпчатый пирог.\r\n'+
+'\r\n'+
+'Пирог, ножи и вилки тут,\r\n'+
+'Пирог, ножи и вилки тут,\r\n'+
+'Пирог, ножи и вилки тут,\r\n'+
+'Но что-то гости не идут.\r\n'+
+'\r\n'+
+'Я ждал, пока хватило сил,\r\n'+
+'Я ждал, пока хватило сил,\r\n'+
+'Я ждал, пока хватило сил,\r\n'+
+'Потом кусочек откусил.\r\n'+
+'\r\n'+
+'Потом подвинул стул и сел,\r\n'+
+'Потом подвинул стул и сел,\r\n'+
+'Потом подвинул стул и сел,\r\n'+
+'И весь пирог в минуту съел.\r\n'+
+'\r\n'+
+'Когда же гости подошли,\r\n'+
+'Когда же гости подошли,\r\n'+
+'Когда же гости подошли,\r\n'+
+'То даже крошек не нашли.\r\n';
+
+var sourse1_ =
+'ОЧЕНЬ ВКУСНЫЙ ПИРОГ\r\n'+
+'\r\n'+
+'Я захотел устроить бал,\r\n'+
+'И я гостей к себе позвал.\r\n'+
+'\r\n'+
+'Купил муку, купил творог,\r\n'+
+'Испек рассыпчатый пирог.\r\n'+
+'\r\n'+
+'Пирог, ножи и вилки тут,\r\n'+
+'Но что-то гости не идут.\r\n'+
+'\r\n'+
+'Я ждал, пока хватило сил,\r\n'+
+'Потом кусочек откусил.\r\n'+
+'\r\n'+
+'Потом подвинул стул и сел,\r\n'+
+'И весь пирог в минуту съел.\r\n'+
+'\r\n'+
+'Когда же гости подошли,\r\n'+
+'То даже крошек не нашли.\r\n';
+
+var sourse2 =
+
+'ПЕСЕНКА ОСЛИКА\r\n'+
+'\r\n'+
+'Не секрет, что друзья не растут в огороде,\r\n'+
+'Не продашь и не купишь друзей!\r\n'+
+'И поэтому я все бегу по дороге\r\n'+
+'С патефоном волшебным в тележке своей.\r\n'+
+'\r\n'+
+'Под грустное мычание, под бодрое рычание,\r\n'+
+'Под дружеское ржание рождается на свет\r\n'+
+'Большой секрет для маленькой,\r\n'+
+'Для маленькой такой компании,\r\n'+
+'Для скромной такой компании\r\n'+
+'Огромный такой секрет!\r\n'+
+'Ля-ля-ля-ля-ля-ля...\r\n'+
+'\r\n'+
+'Не секрет, что друзья - это честь и отвага.\r\n'+
+'Это верность, отвага и честь.\r\n'+
+'А отвага и честь - это рыцарь и шпага,\r\n'+
+'Всем глотателям шпаг никогда их не съесть!\r\n'+
+'\r\n'+
+'Под грустное мычание, под бодрое рычание,\r\n'+
+'Под дружеское ржание рождается на свет\r\n'+
+'Большой секрет для маленькой,\r\n'+
+'Для маленькой такой компании,\r\n'+
+'Для скромной такой компании\r\n'+
+'Огромный такой секрет!\r\n'+
+'Ля-ля-ля-ля-ля-ля...\r\n'+
+'\r\n'+
+'Не секрет, что друзья удирают вприпрыжку,\r\n'+
+'Не хотят на цепочке сидеть.\r\n'+
+'Их заставить нельзя ни за какую коврижку\r\n'+
+'От безделья и скуки балдеть.\r\n'+
+'\r\n'+
+'Под грустное мычание, под бодрое рычание,\r\n'+
+'Под дружеское ржание рождается на свет\r\n'+
+'Большой секрет для маленькой,\r\n'+
+'Для маленькой такой компании,\r\n'+
+'Для скромной такой компании\r\n'+
+'Огромный такой секрет!\r\n'+
+'Ля-ля-ля-ля-ля-ля...\r\n'+
+'\r\n'+
+'Не секрет, что друзья в облака обожают\r\n'+
+'Уноситься на крыльях и без.\r\n'+
+'Но бросаются к нам, если нас обижают,\r\n'+
+'К нам на помощь бросаются даже с небес.\r\n'+
+'\r\n'+
+'Под грустное мычание, под бодрое рычание,\r\n'+
+'Под дружеское ржание рождается на свет\r\n'+
+'Большой секрет для маленькой,\r\n'+
+'Для маленькой такой компании,\r\n'+
+'Для скромной такой компании\r\n'+
+'Огромный такой секрет!\r\n'+
+'Ах было б только с кем,\r\n'+
+'Ах было б только с кем,\r\n'+
+'Ах было б только с кем поговорить!\r\n';
+
+var sourse2_ =
+
+'Под грустное мычание, под бодрое рычание,\r\n'+
+'Под дружеское ржание рождается на свет\r\n'+
+'Большой секрет для маленькой,\r\n'+
+'Для маленькой такой компании,\r\n'+
+'Для скромной такой компании\r\n'+
+'Огромный такой секрет!\r\n'+
+'ПЕСЕНКА ОСЛИКА\r\n'+
+'\r\n'+
+'Не секрет, что друзья не растут в огороде,\r\n'+
+'Не продашь и не купишь друзей!\r\n'+
+'И поэтому я все бегу по дороге\r\n'+
+'С патефоном волшебным в тележке своей.\r\n'+
+'\r\n'+
+'<вставка>\r\n'+
+'Ля-ля-ля-ля-ля-ля...\r\n'+
+'\r\n'+
+'Не секрет, что друзья - это честь и отвага.\r\n'+
+'Это верность, отвага и честь.\r\n'+
+'А отвага и честь - это рыцарь и шпага,\r\n'+
+'Всем глотателям шпаг никогда их не съесть!\r\n'+
+'\r\n'+
+'<вставка>\r\n'+
+'Ля-ля-ля-ля-ля-ля...\r\n'+
+'\r\n'+
+'Не секрет, что друзья удирают вприпрыжку,\r\n'+
+'Не хотят на цепочке сидеть.\r\n'+
+'Их заставить нельзя ни за какую коврижку\r\n'+
+'От безделья и скуки балдеть.\r\n'+
+'\r\n'+
+'<вставка>\r\n'+
+'Ля-ля-ля-ля-ля-ля...\r\n'+
+'\r\n'+
+'Не секрет, что друзья в облака обожают\r\n'+
+'Уноситься на крыльях и без.\r\n'+
+'Но бросаются к нам, если нас обижают,\r\n'+
+'К нам на помощь бросаются даже с небес.\r\n'+
+'\r\n'+
+'<вставка>\r\n'+
+'Ах было б только с кем,\r\n'+
+'Ах было б только с кем,\r\n'+
+'Ах было б только с кем поговорить!\r\n';
+
+var sourse3 =
+
+'ЛОШАДКА ПОНИ\r\n'+
+'\r\n'+
+'Шотландские народные стихи\r\n'+
+'в переводе Ирины Токмаковой\r\n'+
+'\r\n'+
+'Мою лошадку пони\r\n'+
+'Зовут Малютка Грей.\r\n'+
+'Соседка наша в город\r\n'+
+'Поехала на ней.\r\n'+
+'\r\n'+
+'Она её хлестала\r\n'+
+'И палкой и кнутом,\r\n'+
+'И под гору и в гору\r\n'+
+'Гнала её бегом.\r\n'+
+'\r\n'+
+'Не дам ей больше пони\r\n'+
+'Ни нынче, ни потом.\r\n'+
+'Пускай хоть все соседи\r\n'+
+'Придут просить о том!\r\n';
+
+var sourse3_ = '';
+
+var sourse4 =
+'КОРАБЛИК\r\n'+
+'\r\n'+
+'По реке плывет кораблик.\r\n'+
+'Он плывет издалека.\r\n'+
+'На кораблике четыре\r\n'+
+'Очень храбрых моряка.\r\n'+
+'\r\n'+
+'У них ушки на макушке,\r\n'+
+'У них длинные хвосты,\r\n'+
+'И страшны им только кошки,\r\n'+
+'Только кошки да коты!\r\n';
+
+var sourse4_ = '';
+
+var sourse5 =
+'БУЛЬДОГ И ТАКСИК\r\n'+
+'\r\n'+
+'Даниил Хармс\r\n'+
+'\r\n'+
+'Над косточкой сидит бульдог,\r\n'+
+'Привязанный к столбу.\r\n'+
+'Подходит таксик маленький,\r\n'+
+'С морщинками на лбу.\r\n'+
+'"Послушайте, бульдог, бульдог! -\r\n'+
+'Сказал незваный гость. -\r\n'+
+'Позвольте мне, бульдог, бульдог,\r\n'+
+'Докушать эту кость".\r\n'+
+'\r\n'+
+'Рычит бульдог на таксика:\r\n'+
+'"Не дам вам ничего!"\r\n'+
+'Бежит бульдог за таксиком,\r\n'+
+'А таксик от него.\r\n'+
+'\r\n'+
+'Бегут они вокруг столба.\r\n'+
+'Как лев, бульдог рычит.\r\n'+
+'И цепь стучит вокруг столба,\r\n'+
+'Вокруг столба стучит.\r\n'+
+'\r\n'+
+'Теперь бульдогу косточку\r\n'+
+'Не взять уже никак.\r\n'+
+'А таксик, взявши косточку,\r\n'+
+'Сказал бульдогу так:\r\n'+
+'"Пора мне на свидание,\r\n'+
+'Уж восемь без пяти.\r\n'+
+'Как поздно! До свидания!\r\n'+
+'Сидите на цепи!"\r\n';
+
+var sourse5_ = '';
+
+var sourse6 =
+'САМОВАРО-ПАРОВОЗО-ВЕТРОЛЕТ\r\n'+
+'Юнна Мориц\r\n'+
+'\r\n'+
+'Самоваро...\r\n'+
+'Самоваро...\r\n'+
+'Самоваро-паровозо...\r\n'+
+'Самоваро-паровозо...\r\n'+
+'\r\n'+
+'Самоваро-паровозо-ветролет!\r\n'+
+'Он летит, свистит, пыхтит и чай дает.\r\n'+
+'Он летит себе по небу и свистит,\r\n'+
+'И чаек для Дуси с Васей кипятит.\r\n'+
+'И чаек для Дуси с Васей кипятит.\r\n'+
+'\r\n'+
+'Самоваро-паровозо-ветролет!\r\n'+
+'Самоваро-паровозо-ветролет!\r\n'+
+'\r\n'+
+'Он летит себе по небу и свистит,\r\n'+
+'И чаек для Дуси с Васей кипятит.\r\n'+
+'Он летит, свистит, пыхтит и чай дает -\r\n'+
+'Самоваро-паровозо-ветролет!\r\n'+
+'Самоваро-паровозо-ветролет!\r\n'+
+'\r\n'+
+'Самоваро-паровозо-ветролет!\r\n'+
+'Самоваро-паровозо-ветролет!\r\n';
+
+var sourse6_ = '';
+
+
+function test1RU()
+{
+   document.all['inerr1'].innerHTML = showErrLineRU(document.all['msed1'].value,sourse1, true);
+
+}
+
+function test2RU()
+{
+   document.all['inerr2'].innerHTML = showErrLineRU(document.all['msed2'].value,sourse2, true);
+
+}
+
+function test3RU()
+{
+   document.all['inerr3'].innerHTML = showErrLineRU(document.all['msed3'].value,sourse3, true);
+
+}
+
+function test4RU()
+{
+   document.all['inerr4'].innerHTML = showErrLineRU(document.all['msed4'].value,sourse4, true);
+
+}
+
+function test5RU()
+{
+   document.all['inerr5'].innerHTML = showErrLineRU(document.all['msed5'].value,sourse5, true);
+
+}
+
+function test6RU()
+{
+   document.all['inerr6'].innerHTML = showErrLineRU(document.all['msed6'].value,sourse6, true);
+
+}
+
+//-->
+</SCRIPT>
+  </HEAD>
+
+  <BODY bgcolor=white text=black link=blue alink=red vlink=purple
+        onload = "iniTaskRU()">
+
+    <SPAN style="
+          position:absolute; left:0px; top:0px;
+          height:99px; width:100%; z-index:-1;
+          background: repeat-y rgb(0,204,255) url(../pic/fon.gif);">
+          &nbsp;
+    </SPAN>
+
+    <A href=05.htm><IMG style="position:absolute;left:40px;top:10px;"
+         src=./pic/05.gif width=234 height=35 border=0
+         hspace=0 vspace=0 alt='Копирование'></A>
+
+
+
+    <TABLE style="position:absolute;left:0px;top:40px;"
+           border=0 cellspacing=0 cellpadding=0 width=100%>
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD align=right>
+          <IMG src=./pic/r.gif width=244 height=51 border=0
+               vspace=0 hspace=10 alt="">
+        </TD>
+      </TR>
+
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD colspan=2
+          ><IMG src=../pic/label.gif width=550 height=15 border=0
+               vspace=0 hspace=0 alt="Регистрационная метка"
+        ></TD>
+      </TR>
+    </TABLE>
+
+    <IMG style="position:absolute;left:87px;top:50px"
+         src=./pic/e.gif width=148 height=21 border=0
+         hspace=0 vspace=0 alt="Практикум">
+
+    <IMG style="position:absolute; left:5px; top:10px;"
+         src=../pic/robotru.gif width=18 height=152 border=0
+         alt="">
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD colspan=2>
+          <IMG src=../pic/empty.gif width=1 height=110 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <IMG src=../pic/empty.gif width=72 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD>
+
+      <P>
+        <IMG class=tasks src=../pic/task3.gif width=200 height=68 border=0
+              hspace=0 alt="Практикум">
+
+
+      <H2>Задание 1</H2>
+
+      <P>
+Используя копирование строк через буфер обмена, получите в поле
+редактора полный текст стихотворения.
+
+      <P>
+Каждая стихотворная строка (и заголовок) должна начинаться с первой
+позиции. После каждых четырех строк (и заголовка) должна идти ровно
+одна пустая строка.
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed1'].value=sourse1_;document.all['inerr1'].innerHTML=''">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<IMG src=./pic/0505.gif width=420 height=300 border=0
+     hspace=0 vspace=0 alt='"Очень вкусный пирог". Даниил Хармс'>
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed1 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+      
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+      <H2>Задание 2</H2>
+
+      
+
+      <DIV>ПРАВИЛО:<BR>
+Если отметить в тексте фрагмент, а затем выполнить вставку из буфера
+обмена, то содержимое буфера заменит выделенный фрагмент:
+      </DIV>
+
+      <P>
+<IMG src=./pic/0502e.gif width=480 height=150 border=0
+     hspace=0 vspace=0 alt=''><BR><BR>
+
+      <DIV>
+Воспользуйтесь описанным свойством замены при выполнении задания.
+      </DIV>
+
+      <P>ЗАДАНИЕ:<BR><BR>
+Повторяющаяся часть припева песенки на стихи Юнны Мориц вынесена
+в начальные строки текста.
+
+      <P>
+Используя операцию вырезания, поместите эту часть в буфер обмена, а
+затем замените ею фрагменты, обозначенные в тексте словом
+&#147;вставка&#148; в угловых скобках.
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed2'].value=sourse2_;document.all['inerr2'].innerHTML=''">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed2 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+      
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+
+      <H2>Задание 3</H2>
+
+     
+
+      <P>
+Буфер обмена можно использовать для копирования информации из одной
+области экрана в другую.
+
+      <P>
+Соберите в поле редактора стихотворение Ирины Токмаковой.
+
+      </P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD colspan=2>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed3'].value=sourse3_;document.all['inerr3'].innerHTML=''">
+        </TD>
+      </TR>
+
+      <TR valign=top>
+        <TD>
+<DIV class=place>
+ЛОШАДКА ПОНИ<BR><BR>
+
+Шотландские народные стихи<BR>
+<NOBR>в переводе Ирины Токмаковой</NOBR><BR>
+</DIV>
+        </TD>
+        <TD>
+<DIV class=place>
+Она её хлестала<BR>
+<NOBR>И палкой и кнутом,</NOBR><BR>
+И под гору и в гору<BR>
+Гнала её бегом.<BR>
+</DIV>
+        </TD>
+      </TR>
+      <TR valign=top>
+        <TD>
+<DIV class=place>
+Мою лошадку пони<BR>
+Зовут Малютка Грей.<BR>
+<NOBR>Соседка наша в город</NOBR><BR>
+Поехала на ней.<BR>
+</DIV>
+        </TD>
+        <TD>
+<DIV class=place>
+Не дам ей больше пони<BR>
+Ни нынче, ни потом.<BR>
+<NOBR>Пускай хоть все соседи</NOBR><BR>
+Придут просить о том!<BR>
+</DIV>
+        </TD>
+      </TR>
+
+      <TR>
+        <TD colspan=2>
+<TEXTAREA id=msed3 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+      
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+
+      <H2>Задание 4</H2>
+
+     
+
+      <P>
+Буфер обмена можно использовать для копирования информации из одного
+окна в другое.
+
+      <P>
+Соберите в поле редактора стихотворение Даниила Хармса. Первую часть
+стихотворения скопируйте из первого окна, вторую&nbsp;&#151; из второго.
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed5'].value=sourse5_;document.all['inerr5'].innerHTML=''">
+<INPUT type=button value="Окно 1"
+       onclick="NewBrouserRU('05e1.htm','width=400,height=460,menubar=0,resizable=0,scrollbars=0');">
+<INPUT type=button value="Окно 2"
+       onclick="NewBrouserRU('05e2.htm','width=400,height=460,menubar=0,resizable=0,scrollbars=0');">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed5 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+      
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+
+      <H2>Задание 5</H2>
+
+      
+
+      <P>
+Наберите в одну колонку строки песенки Сергея Никитина на стихотворение
+Юнны Мориц.
+
+      <P>
+Используйте приёмы копирования информации и не забывайте про откатку и
+накатку.
+
+      <P>
+    <FORM>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed6'].value=sourse5_;document.all['inerr6'].innerHTML=''">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<IMG src=./pic/0501e.gif width=500 height=237 border=0 hspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<TEXTAREA id=msed6 rows=9 cols=44 wrap=off>
+</TEXTAREA>
+      <DIV class=errmess>
+        <INPUT type=button value="Покажите работу преподавателю" onclick="test6RU()"><BR><BR>
+        <NOBR><DIV id=inerr6></DIV></NOBR>
+      </DIV>
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+      <P>
+      <IMG style="position:relative; left:-62px;"
+           src=../pic/podval.gif width=490 height=15 border=0
+           alt="Азы информатики RU 2000/2002 &copy; А.А.Дуванов">
+
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <NOBR>
+          <IMG src=../pic/empty.gif width=22 height=1 border=0
+               alt="" hspace=0 vspace=0>
+          <IMG src=../pic/up.gif width=35 height=35 border=0
+               alt=Вверх hspace=0 vspace=0
+               onclick="scroll(0,0)"
+               onmouseover="this.src='../pic/up_.gif'"
+               onmouseout="this.src='../pic/up.gif'">
+          </NOBR>
+        </TD>
+
+        <TD>
+      <NOBR>
+      <A href=index.htm><IMG src=../pic/home.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt="Оглавление книги"
+           onmouseover="this.src='../pic/home_.gif'"
+           onmouseout="this.src='../pic/home.gif'"></A>
+
+      <A href=05.htm><IMG src=../pic/left.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt='Урок 5. Копирование'
+           onmouseover="this.src='../pic/left_.gif'"
+           onmouseout="this.src='../pic/left.gif'"></A>
+
+        <A href=mailto:kurs@robotland.users.botik.ru
+           onmouseover="letter.src = '../pic/letter_.gif'"
+           onmouseout ="letter.src = '../pic/letter.gif'">
+           <IMG name=letter
+                src=../pic/letter.gif width=50 height=40
+                border=0 alt="Письмо автору"></A>
+
+        <A href="javascript:void(0)"
+           onmouseover="copyr.src ='../pic/copyr_.gif'"
+           OnMouseOut ="copyr.src = '../pic/copyr.gif'"
+           onclick="CopyrRU('../')">
+           <IMG name=copyr
+                src=../pic/copyr.gif  width=50 height=40
+                border=0 alt="Об авторах"></A>
+      </NOBR>
+     </TD>
+     </TR>
+     </TABLE>
+
+  </BODY>
+</HTML>

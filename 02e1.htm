@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <LINK rel="stylesheet" type="text/css" href=student.css>
+    <SCRIPT language="JavaScript" src=../common.js></SCRIPT>
+    <TITLE>Компьютер - помощник редактора (практикум)</TITLE>
+<STYLE>
+.input
+{
+  font-size:18pt;
+  font-family: "Arial Cyr", Geneva, Helvetica, sans-serif;
+  letter-spacing:1px;
+  color:rgb(0,0,40);
+}
+</STYLE>
+  </HEAD>
+
+  <BODY bgcolor=white text=black link=blue alink=red vlink=purple>
+
+    <SPAN style="
+          position:absolute; left:0px; top:0px;
+          height:99px; width:100%; z-index:-1;
+          background: repeat-y rgb(0,204,255) url(../pic/fon.gif);">
+          &nbsp;
+    </SPAN>
+
+    <A href=02.htm><IMG style="position:absolute;left:40px;top:10px;"
+         src=./pic/02.gif width=560 height=35 border=0
+         hspace=0 vspace=0 alt='Компьютер - помощник редактора'></A>
+
+
+    <TABLE style="position:absolute;left:0px;top:40px;"
+           border=0 cellspacing=0 cellpadding=0 width=100%>
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD align=right>
+          <IMG src=./pic/r.gif width=267 height=51 border=0
+               vspace=0 hspace=10 alt="">
+        </TD>
+      </TR>
+
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD colspan=2
+          ><IMG src=../pic/label.gif width=550 height=15 border=0
+               vspace=0 hspace=0 alt="Регистрационная метка"
+        ></TD>
+      </TR>
+    </TABLE>
+
+    <IMG style="position:absolute;left:87px;top:50px"
+         src=./pic/e.gif width=148 height=21 border=0
+         hspace=0 vspace=0 alt="Практикум">
+
+    <IMG style="position:absolute; left:5px; top:10px;"
+         src=../pic/robotru.gif width=18 height=152 border=0
+         alt="">
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD colspan=2>
+          <IMG src=../pic/empty.gif width=1 height=110 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <IMG src=../pic/empty.gif width=72 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD>
+
+      <P>
+        <IMG class=tasks src=../pic/task3.gif width=200 height=68 border=0
+              hspace=0 alt="Практикум">
+
+
+      <H2>Ваша скорость работы с клавиатурой</H2>
+
+        <P>
+Ниже приводится стенд для подсчета скорости передачи информации в
+компьютер через клавиатуру.
+        </P>
+
+<H4>Алгоритм работы на стенде</H4>
+
+1. Включить режим русских букв.<BR>
+2. Нажать кнопку <TT>Пуск</TT>.<BR>
+3. Пока часы не остановятся нажимайте клавишу с тем символом,
+   который появляется в окошке.<BR><BR>
+
+  <SCRIPT language=JavaScript>
+  <!--
+
+var carTimeStendRU  = 0;     // Текущее значение таймера
+var indTimeStendRU  = null;  // Идентификатор таймера
+var timeStendRU     = 60;    // Число секунд, которое работает стенд
+var setSymbolRU     = new Array("A","Б","В","Г","Д","Е","Ж","З","И","Й","К","Л","М","Н","О","П","Р","С","Т","У","Ф","Х","Ц","Ч","Ш","Щ","Ъ","Ы","Ь","Э","Ю","Я");
+var numSymbolRU     = 0;     // Число символов, введенных пользователем
+var SymbolRU        = "";    // Текущий символ
+var indSymbolRU;             // Индекс текущего символа
+
+// Запуск стенда
+// -------------
+function puskRU()
+{
+  if(indTimeStendRU != null)
+  {
+    clearInterval(indTimeStendRU);
+    indTimeStendRU = null;
+  }
+  numSymbolRU    = 0;
+  genSymbolRU();
+  carTimeStendRU = timeStendRU*1000;
+  document.all['numberSymbolRU'].innerText = numSymbolRU;
+  document.all['inboxRU'].focus();
+  document.all['velosityRU'].value = "";
+  // Запускаем таймер
+  indTimeStendRU = setInterval("workStendRU()", 100);
+}
+
+// Генератор символов
+// ------------------
+function genSymbolRU()
+{
+  indSymbolRU = Math.round(Math.random()*(setSymbolRU.length-1));
+  SymbolRU = setSymbolRU[indSymbolRU];
+  document.all['placeSymbolRU'].innerText = SymbolRU;
+
+}
+// Работа стенда
+// -------------
+function workStendRU()
+{
+  if (indTimeStendRU != null && carTimeStendRU < 0)
+  {
+    clearInterval(indTimeStendRU);
+    indTimeStendRU = null;
+    document.all['inboxRU'].blur();
+    document.all['inboxRU'].value="";
+    document.all['placeSymbolRU'].innerText = "";
+  }
+  else
+  {
+    var sek  = Math.floor(carTimeStendRU/1000);
+    var msek = parseInt((carTimeStendRU-sek*1000)/100);
+    if (sek < 10) sek = "0"+sek;
+    document.all['timeRU'].innerText = sek+":"+msek;
+    carTimeStendRU -= 100;
+  }
+  var vel = Math.ceil(numSymbolRU/(timeStendRU*10-carTimeStendRU/100)*600);
+  document.all['velosityRU'].value = vel;
+}
+
+// Пользователь нажал на клавишу
+function inSymbol(key)
+{
+ if (indTimeStendRU != null && carTimeStendRU > 0)
+ {
+   if (key == indSymbolRU+1040 || key == indSymbolRU+1072)
+   {
+     genSymbolRU();
+     numSymbolRU++;
+     document.all['numberSymbolRU'].innerText = numSymbolRU;
+   }
+   document.all['inboxRU'].value="";
+   document.all['inboxRU'].focus();
+ }
+
+}
+  //-->
+  </SCRIPT>
+
+<FORM>
+<TABLE class=tabl border=0 cellspacing=0 cellpadding=10>
+ <TR>
+   <TD style="width:50px">
+     <INPUT type=button value=Пуск onclick="puskRU()">
+   </TD>
+   <TD rowspan=2>
+    <TABLE border=0 cellspacing=0 cellpadding=0>
+      <TR>
+        <TD style="width:15px; height:15px;background:no-repeat url(../pic/lt.gif);"></TD>
+        <TD style="height:15px;background:repeat-x url(../pic/tt.gif);"></TD>
+        <TD style="width:15px; height:15px;background:no-repeat url(../pic/rt.gif);"></TD>
+      </TR>
+      <TR>
+        <TD style="width:15;background:repeat-y url(../pic/ll.gif);">&nbsp;</TD>
+        <TD align=center style="width:70px;height:80px;padding:15;background:rgb(0,204,255);font-size:20pt;">
+         <SPAN id=placeSymbolRU>&nbsp;</SPAN>
+        </TD>
+        <TD style="position:relative;width:15;background:repeat-y url(../pic/rr.gif);">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD style="width:15px; height:15px;background:no-repeat url(../pic/lb.gif);">&nbsp;</TD>
+        <TD style="height:15px;background:repeat-x url(../pic/bb.gif);">&nbsp;</TD>
+        <TD style="width:15px; height:15px;background:no-repeat url(../pic/rb.gif);">&nbsp;</TD>
+      </TR>
+    </TABLE>
+   </TD>
+   <TD>
+     <INPUT class=input type=text name=inboxRU
+            onkeypress="inSymbol(event.keyCode)"
+            size=3 value="">
+   </TD>
+ </TR>
+ <TR>
+   <TD>
+     <SPAN id=timeRU>&nbsp;</SPAN>
+   </TD>
+   <TD>
+     <SPAN id=numberSymbolRU>&nbsp;</SPAN>
+   </TD>
+ </TR>
+</TABLE><BR><BR>
+
+Ваша скорость:
+<INPUT class=check type=text size=10 name=velosityRU readonly>
+символов в минуту.
+</FORM>
+
+
+      <P>
+      <IMG style="position:relative; left:-62px;"
+           src=../pic/podval.gif width=490 height=15 border=0
+           alt="Азы информатики RU 2000/2002 &copy; А.А.Дуванов">
+
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <NOBR>
+          <IMG src=../pic/empty.gif width=22 height=1 border=0
+               alt="" hspace=0 vspace=0>
+          <IMG src=../pic/up.gif width=35 height=35 border=0
+               alt=Вверх hspace=0 vspace=0
+               onclick="scroll(0,0)"
+               onmouseover="this.src='../pic/up_.gif'"
+               onmouseout="this.src='../pic/up.gif'">
+          </NOBR>
+        </TD>
+
+        <TD>
+      <NOBR>
+      <A href=index.htm><IMG src=../pic/home.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt="Оглавление книги"
+           onmouseover="this.src='../pic/home_.gif'"
+           onmouseout="this.src='../pic/home.gif'"></A>
+
+      <A href=02.htm><IMG src=../pic/left.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt='Урок 2. Компьютер - помощник редактора'
+           onmouseover="this.src='../pic/left_.gif'"
+           onmouseout="this.src='../pic/left.gif'"></A>
+
+
+        <A href=mailto:kurs@robotland.users.botik.ru
+           onmouseover="letter.src = '../pic/letter_.gif'"
+           onmouseout ="letter.src = '../pic/letter.gif'">
+           <IMG name=letter
+                src=../pic/letter.gif width=50 height=40
+                border=0 alt="Письмо автору"></A>
+
+        <A href="javascript:void(0)"
+           onmouseover="copyr.src ='../pic/copyr_.gif'"
+           OnMouseOut ="copyr.src = '../pic/copyr.gif'"
+           onclick="CopyrRU('../')">
+           <IMG name=copyr
+                src=../pic/copyr.gif  width=50 height=40
+                border=0 alt="Об авторах"></A>
+      </NOBR>
+     </TD>
+     </TR>
+     </TABLE>
+
+  </BODY>
+</HTML>

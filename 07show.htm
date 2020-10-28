@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Окно для показа</TITLE>
+  <STYLE type="text/css">
+  <!--
+    BODY
+    {
+     padding-left: 10px;
+     padding-top: 10px;
+     margin:0px;
+     background:#EEE5DB;
+     font-family:"Arial Cyr",Arial;
+     font-size:12pt;
+    }
+    .field
+   {
+     background:#EEE5DB;
+     border-style: solid;
+     border-width: 1px;
+     border-left-color: gray;
+     border-top-color: gray;
+     border-right-color: white;
+     border-bottom-color: white;
+     width:140px;
+     height:150px;
+   }
+   .header
+   {
+     color: #009900;
+     font-weight:bold;
+     font-size:20pt;
+   }
+  -->
+  </STYLE>
+  </HEAD>
+
+  <BODY bgcolor=#EEE5DB text=#4C3300 link=blue alink=red vlink=purple
+        onload="
+                document.all['bodyRU'].innerHTML=dialogArguments;
+               "
+        onkeypress="
+                if (event.keyCode==27)
+                {
+                  window.returnValue=null;
+                  window.close();
+                }">
+
+     <DIV id=bodyRU>&nbsp;</DIV>
+
+ </BODY>
+</HTML>

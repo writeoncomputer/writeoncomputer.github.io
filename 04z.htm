@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <LINK rel="stylesheet" type="text/css" href=student.css>
+    <SCRIPT language="JavaScript" src=../common.js></SCRIPT>
+    <SCRIPT language="JavaScript" src=./msed.js></SCRIPT>
+    <TITLE>Приёмы редактирования</TITLE>
+<STYLE>
+
+.errmark
+{
+  text-decoration: underline;
+}
+
+</STYLE>
+<SCRIPT language=JavaScript>
+<!--
+function iniTaskRU()
+{
+  document.all['msed3'].value=sourse3_;
+  document.all['msed4'].value=sourse4_;
+  document.all['msed5'].value=sourse5_;
+  document.all['msed6'].value=sourse6_;
+}
+
+var sourse3  =
+'Осел\r\n'+
+'и\r\n'+
+'собака\r\n'+
+'легли\r\n'+
+'под\r\n'+
+'большим\r\n'+
+'дубом,\r\n'+
+'кот\r\n'+
+'сел\r\n'+
+'на\r\n'+
+'ветку,\r\n'+
+'а\r\n'+
+'петух\r\n'+
+'взлетел\r\n'+
+'на\r\n'+
+'самую\r\n'+
+'верхушку\r\n'+
+'дерева\r\n'+
+'и\r\n'+
+'стал\r\n'+
+'оттуда\r\n'+
+'смотреть\r\n'+
+'по\r\n'+
+'сторонам.\r\n';
+
+var sourse3_ =
+"Осел и собака легли под большим дубом, кот сел на ветку, а петух взлетел на самую верхушку дерева и стал оттуда смотреть по сторонам.";
+
+var sourse4  =
+'Рассердился кот, вскочил, зафыркал, да как цапнет разбойника лапой, да как зашипит!\r\n';
+var sourse4_ =
+'Рассердился \r\n'+
+'кот, \r\n'+
+'вскочил, \r\n'+
+'зафыркал, \r\n'+
+'да \r\n'+
+'как \r\n'+
+'цапнет \r\n'+
+'разбойника \r\n'+
+'лапой, \r\n'+
+'да \r\n'+
+'как \r\n'+
+'зашипит!\r\n';
+
+var sourse5  =
+'У меня зазвонил телефон.\r\n'+
+'- Кто говорит?\r\n'+
+'- Слон.\r\n'+
+'- Откуда?\r\n'+
+'- От верблюда.\r\n'+
+'- Что вам надо?\r\n'+
+'- Шоколада.\r\n'+
+'- Для кого?\r\n'+
+'- Для сына моего.\r\n';
+
+var sourse5_  =
+'У меня зазвонил телефон. <Надоедливо!>\r\n'+
+'- Кто говорит? <Спросил я в\r\n'+
+'телефонную трубку.>\r\n'+
+'- Слон. <Вот это, да!\r\n'+
+'Мне слон звонит!>\r\n'+
+'- Откуда?  <Это опять спросил я.>\r\n'+
+'- От верблюда. <Интересно,\r\n'+
+'у верблюда был один\r\n'+
+'горб или два?>\r\n'+
+'<Говорю слону.> - Что вам надо?\r\n'+
+'- Шоколада. <Разве слоны едят шоколад?>\r\n'+
+'- Для кого?\r\n'+
+'<Нет, вы только подумайте: шоколад - слону!>\r\n'+
+'- Для сына моего.\r\n';
+
+var sourse6  =
+'"Вот теперь тебя люблю я,\r\n'+
+'Вот теперь тебя хвалю я!\r\n'+
+'Наконец-то ты, грязнуля,\r\n'+
+'Мойдодыру угодил!"\r\n';
+
+var sourse6_  = '';
+
+
+function test3RU()
+{
+  showErrLineRU(document.all['msed3'].value,sourse3, true);
+  return isErrMsedRU;
+}
+
+function test4RU()
+{
+  showErrLineRU(document.all['msed4'].value,sourse4, false);
+  return isErrMsedRU;
+}
+
+function test5RU()
+{
+  showErrLineRU(document.all['msed5'].value,sourse5, false);
+  return isErrMsedRU;
+}
+
+function test6RU()
+{
+  showErrLineRU(document.all['msed6'].value,sourse6, true);
+  return isErrMsedRU;
+}
+
+
+
+//-->
+</SCRIPT>
+
+  </HEAD>
+
+  <BODY bgcolor=white text=black link=blue alink=red vlink=purple
+        onload="iniTaskRU()">
+
+    <SPAN style="
+          position:absolute; left:0px; top:0px;
+          height:99px; width:100%; z-index:-1;
+          background: repeat-y rgb(0,204,255) url(../pic/fon.gif);">
+          &nbsp;
+    </SPAN>
+
+    <A href=04.htm><IMG style="position:absolute;left:40px;top:10px;"
+         src=./pic/04.gif width=400 height=35 border=0
+         hspace=0 vspace=0 alt='Приёмы редактирования'></A>
+
+    <TABLE style="position:absolute;left:0px;top:40px;"
+           border=0 cellspacing=0 cellpadding=0 width=100%>
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD align=right>
+          <IMG src=./pic/r.gif width=267 height=51 border=0
+               vspace=0 hspace=10 alt="">
+        </TD>
+      </TR>
+
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD colspan=2
+          ><IMG src=../pic/label.gif width=550 height=15 border=0
+               vspace=0 hspace=0 alt="Регистрационная метка"
+        ></TD>
+      </TR>
+    </TABLE>
+
+    <IMG style="position:absolute;left:87px;top:50px"
+         src=./pic/zclass.gif width=225 height=19 border=0
+         hspace=0 vspace=0 alt="Зачетный класс">
+
+    <IMG style="position:absolute; left:5px; top:10px;"
+         src=../pic/robotru.gif width=18 height=152 border=0
+         alt="">
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD colspan=2>
+          <IMG src=../pic/empty.gif width=1 height=110 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <IMG src=../pic/empty.gif width=72 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD>
+
+      <P>
+        <IMG class=tasks src=../pic/task2.gif width=200 height=68 border=0
+              hspace=0 alt="Зачетный класс">
+
+    <P>
+Нажмите кнопку <SPAN class=mark>Сброс</SPAN>, затем приступайте к
+решению.
+
+      <P>
+    <FORM  name=exam>
+      <P>
+      <IMG src=../pic/clear.gif width=113 height=41
+           border=0 alt="Сброс"
+           onmouseup   ="room.Ini();iniTaskRU()"
+           onmousedown ="this.src='../pic/clear2.gif'"
+           onmouseover ="this.src='../pic/clear1.gif'"
+           onmouseout  ="this.src='../pic/clear.gif'">
+
+      <P>
+      <OL type=1>
+        <LI class=text>
+Выберите правильную схему расположения текста в памяти редактора
+(красный квадратик&nbsp;&#151; знак конца строки).
+<BR><BR>
+<IMG src=./pic/0401z.gif width=71 height=80 border=0 hspace=10 alt="">
+  <TABLE  border=0 cellspacing=0 cellpadding=5>
+    <TR>
+      <TD><INPUT type=radio name=item1></TD>
+      <TD><IMG src=./pic/0401z1.gif width=350 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item1></TD>
+      <TD><IMG src=./pic/0401z2.gif width=350 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item1></TD>
+      <TD><IMG src=./pic/0401z3.gif width=380 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item1></TD>
+      <TD><IMG src=./pic/0401z4.gif width=380 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item1></TD>
+      <TD><IMG src=./pic/0401z5.gif width=350 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+  </TABLE>
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = this.form.item1[2].checked;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(1);">
+  <INPUT class=check type=text size=14 name=result1 readonly><BR><BR>
+
+        <LI class=text>
+Выберите правильную схему расположения текста в памяти редактора
+(красный квадратик&nbsp;&#151; знак конца строки).
+<BR><BR>
+<IMG src=./pic/0402z.gif width=80 height=60 border=0 hspace=10 alt="">
+  <TABLE  border=0 cellspacing=0 cellpadding=5>
+    <TR>
+      <TD><INPUT type=radio name=item2></TD>
+      <TD><IMG src=./pic/0402z1.gif width=380 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item2></TD>
+      <TD><IMG src=./pic/0402z2.gif width=380 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item2></TD>
+      <TD><IMG src=./pic/0402z3.gif width=380 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item2></TD>
+      <TD><IMG src=./pic/0402z4.gif width=260 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+    <TR>
+      <TD><INPUT type=radio name=item2></TD>
+      <TD><IMG src=./pic/0402z5.gif width=320 height=20 border=0 hspace=0 alt=""></TD>
+    </TR>
+  </TABLE>
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = this.form.item2[1].checked;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(2);">
+  <INPUT class=check type=text size=14 name=result2 readonly><BR><BR>
+
+
+        <LI class=text>
+Разрежьте текст так, чтобы в каждой строчке находилось
+одно слово (со знаками препинания) без начальных пробелов.
+Для быстрого движения по словам используйте аккорд
+<NOBR><KBD>Ctrl</KBD>+<KBD>Вправо</KBD>.</NOBR>
+<BR><BR>
+
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed3'].value=sourse3_"><BR>
+
+<TEXTAREA id=msed3 rows=6 cols=40 wrap=off>
+</TEXTAREA><BR>
+
+
+  <INPUT class=check type=text size=14 name=result3 readonly><BR><BR>
+
+        <LI class=text>
+Склейте слова так, чтобы получилось предложение, записанное в
+одну длинную строку.
+<BR><BR>
+
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed4'].value=sourse4_"><BR>
+
+<TEXTAREA id=msed4 rows=6 cols=40 wrap=off>
+</TEXTAREA><BR>
+
+ 
+ 
+
+        <LI class=text>
+Удалите из текста все фрагменты, заключенные в угловые скобки
+&lt;...&gt; вместе с самими скобками.
+<BR><BR>
+
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed5'].value=sourse5_"><BR>
+
+<TEXTAREA id=msed5 rows=6 cols=40 wrap=off>
+</TEXTAREA><BR>
+
+  
+
+        <LI class=text>
+Наберите текст точно так, как он изображен ниже.
+<BR><BR>
+
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed6'].value=sourse6_"><BR>
+<IMG src=./pic/0406z.gif width=271 height=110 border=0 hspace=0 alt=""><BR>
+
+<TEXTAREA id=msed6 rows=4 cols=40 wrap=off>
+</TEXTAREA><BR>
+
+ <BR><BR>
+
+      </OL>
+      <P>
+Чтобы увидеть результат работы, нажмите кнопку <SPAN
+class=mark>Оценка</SPAN>.
+
+      <P>
+      <IMG src=../pic/bonus.gif width=113 height=41
+           border=0 alt="Оценка"
+           onmouseup   ="room.Bonus()"
+           onmousedown ="this.src='../pic/bonus2.gif'"
+           onmouseover ="this.src='../pic/bonus1.gif'"
+           onmouseout  ="this.src='../pic/bonus.gif'">
+
+      </FORM>
+      <SCRIPT language=JavaScript>
+      <!--
+        var room = new CheckTasks(6,exam);
+        var i, ret;
+
+      //-->
+      </SCRIPT>
+
+      <P>
+      <IMG style="position:relative; left:-62px;"
+           src=../pic/podval.gif width=490 height=15 border=0
+           alt="Азы информатики RU 2000/2002 &copy; А.А.Дуванов">
+
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <NOBR>
+          <IMG src=../pic/empty.gif width=22 height=1 border=0
+               alt="" hspace=0 vspace=0>
+          <IMG src=../pic/up.gif width=35 height=35 border=0
+               alt=Вверх hspace=0 vspace=0
+               onclick="scroll(0,0)"
+               onmouseover="this.src='../pic/up_.gif'"
+               onmouseout="this.src='../pic/up.gif'">
+          </NOBR>
+        </TD>
+
+        <TD>
+      <NOBR>
+      <A href=index.htm><IMG src=../pic/home.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt="Оглавление книги"
+           onmouseover="this.src='../pic/home_.gif'"
+           onmouseout="this.src='../pic/home.gif'"></A>
+
+      <A href=04.htm><IMG src=../pic/left.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt='Урок 4. Приёмы редактирования'
+           onmouseover="this.src='../pic/left_.gif'"
+           onmouseout="this.src='../pic/left.gif'"></A>
+
+        <A href=mailto:kurs@robotland.users.botik.ru
+           onmouseover="letter.src = '../pic/letter_.gif'"
+           onmouseout ="letter.src = '../pic/letter.gif'">
+           <IMG name=letter
+                src=../pic/letter.gif width=50 height=40
+                border=0 alt="Письмо автору"></A>
+
+        <A href="javascript:void(0)"
+           onmouseover="copyr.src ='../pic/copyr_.gif'"
+           OnMouseOut ="copyr.src = '../pic/copyr.gif'"
+           onclick="CopyrRU('../')">
+           <IMG name=copyr
+                src=../pic/copyr.gif  width=50 height=40
+                border=0 alt="Об авторах"></A>
+      </NOBR>
+     </TD>
+     </TR>
+     </TABLE>
+
+  </BODY>
+</HTML>

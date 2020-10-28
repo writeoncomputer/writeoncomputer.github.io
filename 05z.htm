@@ -1,0 +1,616 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <LINK rel="stylesheet" type="text/css" href=student.css>
+    <SCRIPT language="JavaScript" src=../common.js></SCRIPT>
+    <SCRIPT language="JavaScript" src=./msed.js></SCRIPT>
+    <TITLE>Копирование</TITLE>
+    <STYLE>
+.errmark
+{
+  text-decoration: underline;
+}
+    </STYLE>
+    <SCRIPT language=JavaScript>
+    <!--
+
+// Удаление ведущих и конечных пробелов в строке
+function delEmptyRU(s)
+{
+  var i,j;
+
+  for(i=0; i<s.length; i++)
+    if (s.charAt(i) != " ") break;
+
+  for(j=s.length-1; j>=0 ; j--)
+    if (s.charAt(j) != " ") break;
+
+  if (i>j) return "";
+  else     return s.substring(i,j+1);
+
+}
+
+function iniTaskRU()
+{
+  document.all['msed8'].value=sourse8_;
+  document.all['msed9'].value=sourse9_;
+  document.all['msed10'].value=sourse10_;
+}
+
+var sourse8 =
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n'+
+'- Кто там? - спросил Волк бабушкиным голосом.\r\n';
+var sourse8_ = "";
+
+var sourse9 =
+'< исключительно плохо.>\r\n'+
+'Коровы летают исключительно плохо.\r\n'+
+'Кони ползут исключительно плохо.\r\n'+
+'Птицы лают исключительно плохо.\r\n'+
+'Собаки молчат исключительно плохо.\r\n'+
+'Кошки хрюкают исключительно плохо.\r\n'+
+'Рыбы рычат исключительно плохо.\r\n';
+
+
+var sourse9_ =
+'< исключительно плохо.>\r\n'+
+'Коровы летают\r\n'+
+'Кони ползут\r\n'+
+'Птицы лают\r\n'+
+'Собаки молчат\r\n'+
+'Кошки хрюкают\r\n'+
+'Рыбы рычат';
+
+var sourse10 =
+'УДИВИТЕЛЬНАЯ КОШКА\r\n'+
+'\r\n'+
+'Несчастная кошка порезала лапу -\r\n'+
+'Сидит и ни шагу не может ступить.\r\n'+
+'Скорей, чтобы вылечить кошкину лапу,\r\n'+
+'Воздушные шарики надо купить!\r\n'+
+'\r\n'+
+'И сразу столпился народ на дороге -\r\n'+
+'Шумит, и кричит, и на кошку глядит.\r\n'+
+'А кошка отчасти идет по дороге,\r\n'+
+'Отчасти по воздуху плавно летит!\r\n';
+
+var sourse10_ =
+'УДИВИТЕЛЬНАЯ КОШКА\r\n'+
+'\r\n'+
+'И сразу столпился народ на дороге -\r\n'+
+'Шумит, и кричит, и на кошку глядит.\r\n'+
+'А кошка отчасти идет по дороге,\r\n'+
+'Отчасти по воздуху плавно летит!\r\n'+
+'\r\n'+
+'Несчастная кошка порезала лапу -\r\n'+
+'Сидит и ни шагу не может ступить.\r\n'+
+'Скорей, чтобы вылечить кошкину лапу,\r\n'+
+'Воздушные шарики надо купить!\r\n';
+
+function test8RU()
+{
+  showErrLineRU(document.all['msed8'].value,sourse8, true);
+  return isErrMsedRU;
+}
+
+function test9RU()
+{
+  showErrLineRU(document.all['msed9'].value,sourse9, true);
+  return isErrMsedRU;
+}
+
+function test10RU()
+{
+  showErrLineRU(document.all['msed10'].value,sourse10, true);
+  return isErrMsedRU;
+}
+
+    //-->
+  </SCRIPT>
+  </HEAD>
+  <BODY bgcolor=white text=black link=blue alink=red vlink=purple
+        onload="iniTaskRU()">
+
+    <SPAN style="
+          position:absolute; left:0px; top:0px;
+          height:99px; width:100%; z-index:-1;
+          background: repeat-y rgb(0,204,255) url(../pic/fon.gif);">
+          &nbsp;
+    </SPAN>
+
+    <A href=05.htm><IMG style="position:absolute;left:40px;top:10px;"
+         src=./pic/05.gif width=234 height=35 border=0
+         hspace=0 vspace=0 alt='Копирование'></A>
+
+
+    <TABLE style="position:absolute;left:0px;top:40px;"
+           border=0 cellspacing=0 cellpadding=0 width=100%>
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD align=right>
+          <IMG src=./pic/r.gif width=267 height=51 border=0
+               vspace=0 hspace=10 alt="">
+        </TD>
+      </TR>
+
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD colspan=2
+          ><IMG src=../pic/label.gif width=550 height=15 border=0
+               vspace=0 hspace=0 alt="Регистрационная метка"
+        ></TD>
+      </TR>
+    </TABLE>
+
+    <IMG style="position:absolute;left:87px;top:50px"
+         src=./pic/zclass.gif width=225 height=19 border=0
+         hspace=0 vspace=0 alt="Зачетный класс">
+
+    <IMG style="position:absolute; left:5px; top:10px;"
+         src=../pic/robotru.gif width=18 height=152 border=0
+         alt="">
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD colspan=2>
+          <IMG src=../pic/empty.gif width=1 height=110 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <IMG src=../pic/empty.gif width=72 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD>
+
+      <P>
+        <IMG class=tasks src=../pic/task2.gif width=200 height=68 border=0
+              hspace=0 alt="Зачетный класс">
+
+    <P>
+Нажмите кнопку <SPAN class=mark>Сброс</SPAN>, затем приступайте к
+решению.
+
+      <P>
+    <FORM  name=exam>
+      <P>
+      <IMG src=../pic/clear.gif width=113 height=41
+           border=0 alt="Сброс"
+           onmouseup   ="room.Ini();iniTaskRU()"
+           onmousedown ="this.src='../pic/clear2.gif'"
+           onmouseover ="this.src='../pic/clear1.gif'"
+           onmouseout  ="this.src='../pic/clear.gif'">
+
+      <P>
+      <OL type=1>
+        <LI class=text>
+Для каждого клавиатурного аккорда укажите его действие.
+
+  <TABLE  border=0 cellspacing=0 cellpadding=5>
+    <TR>
+      <TD class=text>
+<KBD>Ctrl</KBD>+<KBD>Z</KBD>
+      </TD>
+      <TD>
+        <SELECT name=item11>
+          <OPTION selected>?</OPTION>       
+          <OPTION>выделить все</OPTION>
+          <OPTION>вырезать</OPTION>
+          <OPTION>откатка</OPTION>
+          <OPTION>накатка</OPTION>
+          <OPTION>копировать</OPTION>
+          <OPTION>вставить</OPTION>
+        </SELECT>
+      </TD>
+   </TR>
+    <TR>
+      <TD class=text>
+<KBD>Ctrl</KBD>+<KBD>Y</KBD>
+      </TD>
+      <TD>
+        <SELECT name=item12>
+          <OPTION selected>?</OPTION>
+          <OPTION>выделить все</OPTION>
+          <OPTION>вырезать</OPTION>
+          <OPTION>откатка</OPTION>
+          <OPTION>накатка</OPTION>
+          <OPTION>копировать</OPTION>
+          <OPTION>вставить</OPTION>
+        </SELECT>
+      </TD>
+   </TR>
+    
+    
+    <TR>
+      <TD class=text>
+<KBD>Ctrl</KBD>+<KBD>X</KBD>
+      </TD>
+      <TD>
+        <SELECT name=item15>
+          <OPTION selected>?</OPTION>
+          <OPTION>выделить все</OPTION>
+          <OPTION>вырезать</OPTION>
+          <OPTION>откатка</OPTION>
+          <OPTION>накатка</OPTION>
+          <OPTION>копировать</OPTION>
+          <OPTION>вставить</OPTION>
+        </SELECT>
+      </TD>
+   </TR>
+    <TR>
+      <TD class=text>
+<KBD>Ctrl</KBD>+<KBD>C</KBD>
+      </TD>
+      <TD>
+        <SELECT name=item16>
+          <OPTION selected>?</OPTION>
+          <OPTION>выделить все</OPTION>
+          <OPTION>вырезать</OPTION>
+          <OPTION>откатка</OPTION>
+          <OPTION>накатка</OPTION>
+          <OPTION>копировать</OPTION>
+          <OPTION>вставить</OPTION>
+        </SELECT>
+      </TD>
+   </TR>
+    <TR>
+      <TD class=text>
+<KBD>Ctrl</KBD>+<KBD>V</KBD>
+      </TD>
+      <TD>
+        <SELECT name=item17>
+          <OPTION selected>?</OPTION>
+          <OPTION>выделить все</OPTION>
+          <OPTION>вырезать</OPTION>
+          <OPTION>откатка</OPTION>
+          <OPTION>накатка</OPTION>
+          <OPTION>копировать</OPTION>
+          <OPTION>вставить</OPTION>
+        </SELECT>
+      </TD>
+   </TR>
+    <TR>
+      <TD class=text>
+<KBD>Ctrl</KBD>+<KBD>A</KBD>
+      </TD>
+      <TD>
+        <SELECT name=item18>
+          <OPTION selected>?</OPTION>
+          <OPTION>выделить все</OPTION>
+          <OPTION>вырезать</OPTION>
+          <OPTION>откатка</OPTION>
+          <OPTION>накатка</OPTION>
+          <OPTION>копировать</OPTION>
+          <OPTION>вставить</OPTION>
+        </SELECT>
+      </TD>
+   </TR>
+  </TABLE>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(this.form.item11.selectedIndex == 3 &&     
+                     this.form.item12.selectedIndex == 4 &&
+                     
+                     this.form.item15.selectedIndex == 2 &&
+                     this.form.item16.selectedIndex == 5 &&
+                     this.form.item17.selectedIndex == 6 &&
+                     this.form.item18.selectedIndex == 1)  ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(1);">
+  <INPUT class=check type=text size=14 name=result1 readonly><BR><BR>
+
+        <LI class=text>
+Вася набрал в редакторе все цифры от 1 до 9:<BR><BR>
+
+<IMG src=./pic/0501z.gif width=120 height=45 border=0 hspace=0 vspace=0 alt="">
+<BR><BR>
+А потом выполнил следующие действия:
+
+
+        <OL type=1>
+<LI><KBD>Влево</KBD>, <KBD>Влево</KBD>, <KBD>Влево</KBD>
+<LI><KBD>BS</KBD>, <KBD>BS</KBD>
+<LI><KBD>Del</KBD>, <KBD>Del</KBD>
+<LI><KBD>Ctrl</KBD>+<KBD>Z</KBD>
+        </OL>
+
+Какое число у него получилось?
+
+  <INPUT type=text size=30 maxlength=12 name=item2
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(parseInt(this.form.item2.value)==123489) ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(2);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(parseInt(this.form.item2.value)==123489) ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(2);">
+  <INPUT class=check type=text size=14 name=result2 readonly><BR><BR>
+
+
+        <LI class=text>
+Вася набрал в редакторе все цифры от 1 до 9:<BR><BR>
+
+<IMG src=./pic/0501z.gif width=120 height=45 border=0 hspace=0 vspace=0 alt="">
+<BR><BR>
+А потом выполнил следующие действия:
+
+
+        <OL type=1>
+<LI><KBD>BS</KBD>
+<LI><KBD>Home</KBD>
+<LI><KBD>Del</KBD>, <KBD>Del</KBD>, <KBD>Del</KBD>, <KBD>Del</KBD>
+<LI><KBD>Ctrl</KBD>+<KBD>Z</KBD>, <KBD>Ctrl</KBD>+<KBD>Z</KBD>
+<LI><KBD>End</KBD>
+<LI><KBD>BS</KBD>
+
+        </OL>
+
+Какое число у него получилось?
+
+  <INPUT type=text size=30 maxlength=12 name=item3
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(parseInt(this.form.item3.value)==34567) ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(3);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(parseInt(this.form.item3.value)==34567) ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(3);">
+  <INPUT class=check type=text size=14 name=result3 readonly><BR><BR>
+
+
+        <LI class=text>
+Вася набрал в редакторе все цифры от 1 до 9:<BR><BR>
+
+<IMG src=./pic/0501z.gif width=120 height=45 border=0 hspace=0 vspace=0 alt="">
+<BR><BR>
+А потом 4 раза повторил следующие действия:
+
+        <OL type=1>
+<LI><KBD>BS</KBD>
+<LI><KBD>Home</KBD>
+<LI><KBD>Del</KBD>
+<LI><KBD>End</KBD>
+        </OL>
+
+Какое число у него получилось?
+
+  <INPUT type=text size=30 maxlength=12 name=item4
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(parseInt(this.form.item4.value)==5) ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(4);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(parseInt(this.form.item4.value)==5) ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(4);">
+  <INPUT class=check type=text size=14 name=result4 readonly><BR><BR>
+
+        <LI class=text>
+Вася набрал в редакторе все цифры от 1 до 9:<BR><BR>
+
+<IMG src=./pic/0501z.gif width=120 height=45 border=0 hspace=0 vspace=0 alt="">
+<BR><BR>
+Потом 4 раза повторил действия:
+
+        <OL type=1>
+<LI><KBD>Влево</KBD>
+<LI><KBD>BS</KBD>
+        </OL>
+
+Затем он действовал так:
+
+        <OL type=1>
+<LI><KBD>Del</KBD>, <KBD>Del</KBD>, <KBD>Del</KBD>, <KBD>Del</KBD>
+<LI><KBD>Ctrl+Z</KBD>, <KBD>Ctrl+Z</KBD>, <KBD>Ctrl+Z</KBD>
+<LI><KBD>Ctrl+Y</KBD>
+        </OL>
+
+Какое число у него получилось?
+
+  <INPUT type=text size=30 maxlength=12 name=item5
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(parseInt(this.form.item5.value)==179) ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(5);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(parseInt(this.form.item5.value)==179) ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(5);">
+  <INPUT class=check type=text size=14 name=result5 readonly><BR><BR>
+
+        <LI class=text>
+Скопируйте следующее предложение в поле ввода ответа.
+
+        <DIV class=out>
+Первым компьютером считают ЭНИАК, созданный в 1946 году.
+        </DIV>
+
+  <INPUT type=text size=30 name=item6
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(delEmptyRU(this.form.item6.value)=='Первым компьютером считают ЭНИАК, созданный в 1946 году.') ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(6);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(delEmptyRU(this.form.item6.value)=='Первым компьютером считают ЭНИАК, созданный в 1946 году.') ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(6);">
+  <INPUT class=check type=text size=14 name=result6 readonly><BR><BR>
+
+        <LI class=text>
+Скопируйте шифровку в поле ввода ответа.
+
+        <DIV class=out>
+с МЕРМА ЙЪ РМБУФЙМЙОБ. рМБУФЙМЙО ОЕЦОЕК, ЮЕН ЗМЙОБ. с МЕРМА ЙЪ РМБУФЙМЙОБ лХЛПМ, ЛМПХОПЧ, УПВБЛ.
+        </DIV>
+
+  <INPUT type=text size=30 name=item7
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(delEmptyRU(this.form.item7.value)=='с МЕРМА ЙЪ РМБУФЙМЙОБ. рМБУФЙМЙО ОЕЦОЕК, ЮЕН ЗМЙОБ. с МЕРМА ЙЪ РМБУФЙМЙОБ лХЛПМ, ЛМПХОПЧ, УПВБЛ.') ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(7);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(delEmptyRU(this.form.item7.value)=='с МЕРМА ЙЪ РМБУФЙМЙОБ. рМБУФЙМЙО ОЕЦОЕК, ЮЕН ЗМЙОБ. с МЕРМА ЙЪ РМБУФЙМЙОБ лХЛПМ, ЛМПХОПЧ, УПВБЛ.') ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(7);">
+  <INPUT class=check type=text size=14 name=result7 readonly><BR><BR>
+
+
+      
+
+
+        <LI class=text>
+Выполните алгоритм в текстовом редакторе.
+<BR><BR>
+        <DIV class=out>
+        <OL type=1>
+<LI>Запомните набор символов, расположенный внутри угловых скобок, в буфере обмена.
+<LI>Установите курсор за последним символом в строке с угловыми скобками.
+<LI>Пока строчки не закончатся, выполняйте следующие действия:<BR>
+3.1. <KBD>Вниз</KBD><BR>
+3.2. <KBD>Ctrl</KBD>+<KBD>V</KBD><BR>
+         </OL>
+        </DIV>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed9'].value=sourse9_"><BR>
+<TEXTAREA id=msed9 rows=6 cols=40 wrap=off>
+</TEXTAREA><BR>
+
+  <BR><BR>
+
+        <LI class=text>
+В стихотворении Даниила Хармса четверостишия переставлены местами.
+Исправьте ошибку, используя вырезание текста в буфер обмена.
+<BR><BR>
+<INPUT type=button value="Сброс"
+       onclick="document.all['msed10'].value=sourse10_"><BR>
+<TEXTAREA id=msed10 rows=6 cols=40 wrap=off>
+</TEXTAREA><BR>
+
+  
+
+      </OL>
+      <P>
+Покажите работу преподавателю.
+
+      
+
+      </FORM>
+      <SCRIPT language=JavaScript>
+      <!--
+        var room = new CheckTasks(10,exam);
+        var i, ret;
+
+      //-->
+      </SCRIPT>
+
+      <P>
+      <IMG style="position:relative; left:-62px;"
+           src=../pic/podval.gif width=490 height=15 border=0
+           alt="Азы информатики RU 2000/2002 &copy; А.А.Дуванов">
+
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <NOBR>
+          <IMG src=../pic/empty.gif width=22 height=1 border=0
+               alt="" hspace=0 vspace=0>
+          <IMG src=../pic/up.gif width=35 height=35 border=0
+               alt=Вверх hspace=0 vspace=0
+               onclick="scroll(0,0)"
+               onmouseover="this.src='../pic/up_.gif'"
+               onmouseout="this.src='../pic/up.gif'">
+          </NOBR>
+        </TD>
+
+        <TD>
+      <NOBR>
+      <A href=index.htm><IMG src=../pic/home.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt="Оглавление книги"
+           onmouseover="this.src='../pic/home_.gif'"
+           onmouseout="this.src='../pic/home.gif'"></A>
+
+      <A href=05.htm><IMG src=../pic/left.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt='Урок 5. Копирование'
+           onmouseover="this.src='../pic/left_.gif'"
+           onmouseout="this.src='../pic/left.gif'"></A>
+
+        <A href=mailto:kurs@robotland.users.botik.ru
+           onmouseover="letter.src = '../pic/letter_.gif'"
+           onmouseout ="letter.src = '../pic/letter.gif'">
+           <IMG name=letter
+                src=../pic/letter.gif width=50 height=40
+                border=0 alt="Письмо автору"></A>
+
+        <A href="javascript:void(0)"
+           onmouseover="copyr.src ='../pic/copyr_.gif'"
+           OnMouseOut ="copyr.src = '../pic/copyr.gif'"
+           onclick="CopyrRU('../')">
+           <IMG name=copyr
+                src=../pic/copyr.gif  width=50 height=40
+                border=0 alt="Об авторах"></A>
+      </NOBR>
+     </TD>
+     </TR>
+     </TABLE>
+
+  </BODY>
+</HTML>

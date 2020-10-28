@@ -1,0 +1,138 @@
+BODY
+{
+  background: repeat-y url(../pic/fon.gif);
+  margin:0px;
+  padding:0px;
+  border-width: 0px;
+}
+
+TABLE,TR,TD
+{
+  border-style: solid;
+  border-width: 0px;
+}
+
+.t
+{
+  border:1px solid gray;
+}
+
+H1,H2,H3,H4,H5,H6
+{
+  color: #009900;
+}
+
+UL
+{
+  list-style-image: url(../pic/disc.gif);
+}
+
+TT
+{
+  color: green;
+  font-weight:bold;
+  font-size:larger;
+}
+
+KBD
+{
+  color: green;
+  font-weight:bold;
+}
+
+.mark
+{
+  color: #BE9802;
+  font-weight:bold;
+}
+
+.tasks
+{
+  position:relative;
+  margin-left:-61px;
+}
+
+.executor
+{
+  position:relative;
+  background:#EEE5DB;
+  padding:10px;
+
+  /* выпуклая граница */
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+}
+
+.in
+{
+  /* впуклая граница */
+
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   gray;
+  border-top-color:    gray;
+  border-right-color:  silver;
+  border-bottom-color: silver;
+
+}
+
+.out
+{
+  /* выпуклая граница */
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+  padding:10px;
+}
+
+.def /* Определение */
+{
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:10px;
+  background:#EEE5DB;
+
+  border-style:        solid;
+  border-width:        2px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+
+  /*font-size:larger; */
+}
+
+.check
+{
+  background:#EEE5DB;
+}
+
+.tabl
+{
+  border-style: solid;
+  border-width: 1px;
+  background:#EEE5DB;
+}
+
+.tablm
+{
+  border-style: solid;
+  border-width: 1px;
+  background:#EEE5DB;
+  color: #BE9802;
+  font-weight:bold;
+}
+
+.foto
+{
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+}

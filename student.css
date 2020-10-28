@@ -1,0 +1,218 @@
+BODY
+{
+  background: repeat-y url(../pic/fon.gif);
+  margin:0px;
+  padding:0px;
+  border-width: 0px;
+}
+
+P
+{
+  font-size:larger;
+  text-align:justify;
+}
+
+TABLE,TR,TD
+{
+  border-style: solid;
+  border-width: 0px;
+}
+
+H1,H2,H3,H4,H5,H6
+{
+  color: #009900;
+}
+
+UL
+{
+  list-style-image: url(../pic/disc.gif);
+}
+
+TT
+{
+  color: green;
+  font-weight:bold;
+  font-size:larger;
+}
+
+KBD
+{
+  color: green;
+  font-weight:bold;
+}
+
+.tabl
+{
+  border-style: solid;
+  border-width: 1px;
+  background:#EEE5DB;
+}
+
+.tablm
+{
+  border-style: solid;
+  border-width: 1px;
+  background:#EEE5DB;
+  color: #BE9802;
+  font-weight:bold;
+}
+
+.mark
+{
+  color: #BE9802;
+  font-weight:bold;
+}
+
+.markb
+{
+  color:#009900;
+  font-weight:bold;
+}
+
+.markred
+{
+  color: red;
+  font-weight:bold;
+}
+
+.marked
+{
+  background:yellow;
+}
+
+.body
+{
+  position:relative;
+  width:100%;
+  left:0px;
+  top:140px;
+  padding-bottom:140px;
+}
+
+.plashka
+{
+  font-size:larger;
+  color: black;
+  background:rgb(0,204,255);
+
+  padding:20px;
+  border-style: solid;
+  border-width: 1px;
+  border-left-color: rgb(0,255,255);
+  border-top-color: rgb(0,255,255);
+  border-right-color: rgb(0,100,100);
+  border-bottom-color: rgb(0,100,100);
+}
+
+.tasks
+{
+  position:relative;
+  margin-left:-61px;
+}
+
+.executor
+{
+  position:relative;
+  background:#EEE5DB;
+  padding:10px;
+
+  /* выпуклая граница */
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+}
+
+.in
+{
+  /* впуклая граница */
+
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   gray;
+  border-top-color:    gray;
+  border-right-color:  silver;
+  border-bottom-color: silver;
+
+}
+
+.out
+{
+  /* выпуклая граница */
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+  padding:10px;
+}
+
+.def /* Определение */
+{
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:10px;
+  background:#EEE5DB;
+
+  border-style:        solid;
+  border-width:        2px;
+  border-left-color:   silver;
+  border-top-color:    silver;
+  border-right-color:  gray;
+  border-bottom-color: gray;
+
+  font-size:larger;
+}
+
+.keyup
+{
+  position:relative;
+  left:-80px;
+}
+
+.text
+{
+  font-size:larger;
+}
+
+.check
+{
+  background:#EEE5DB;
+}
+
+.cross
+{
+  border-style: solid;
+  border-width: 1px;
+  background:#EEE5DB;
+  font-family:monospace;
+}
+
+.vrleft
+{
+
+  border-style:        solid;
+  border-width:        1px;
+  border-left-color:   black;
+  border-top-color:    white;
+  border-right-color:  white;
+  border-bottom-color: white;
+}
+
+.sel
+{
+  /*font-size:75%;
+  font-weight:bold;*/
+}
+
+.selkey
+{
+  color: green;
+  /*
+  font-size:75%;
+  font-weight:bold;*/
+}
+

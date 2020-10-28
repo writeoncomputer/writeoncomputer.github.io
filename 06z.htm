@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <LINK rel="stylesheet" type="text/css" href=student.css>
+    <SCRIPT language="JavaScript" src=../common.js></SCRIPT>
+    <SCRIPT language="JavaScript" src=./msed.js></SCRIPT>
+    <TITLE>Блокнот</TITLE>
+    <STYLE>
+.errmark
+{
+  text-decoration: underline;
+}
+    </STYLE>
+    <SCRIPT language=JavaScript>
+    <!--
+// Удаление ведущих и конечных пробелов в строке
+function delEmptyRU(s)
+{
+  var i,j;
+
+  for(i=0; i<s.length; i++)
+    if (s.charAt(i) != " ") break;
+
+  for(j=s.length-1; j>=0 ; j--)
+    if (s.charAt(j) != " ") break;
+
+  if (i>j) return "";
+  else     return s.substring(i,j+1);
+
+}
+    //-->
+  </SCRIPT>
+  </HEAD>
+  <BODY bgcolor=white text=black link=blue alink=red vlink=purple>
+
+    <SPAN style="
+          position:absolute; left:0px; top:0px;
+          height:99px; width:100%; z-index:-1;
+          background: repeat-y rgb(0,204,255) url(../pic/fon.gif);">
+          &nbsp;
+    </SPAN>
+
+    <A href=06.htm><IMG style="position:absolute;left:40px;top:10px;"
+         src=./pic/06.gif width=167 height=35 border=0
+         hspace=0 vspace=0 alt='Блокнот'></A>
+
+
+    <TABLE style="position:absolute;left:0px;top:40px;"
+           border=0 cellspacing=0 cellpadding=0 width=100%>
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD align=right>
+          <IMG src=./pic/r.gif width=267 height=51 border=0
+               vspace=0 hspace=10 alt="">
+        </TD>
+      </TR>
+
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD colspan=2
+          ><IMG src=../pic/label.gif width=550 height=15 border=0
+               vspace=0 hspace=0 alt="Регистрационная метка"
+        ></TD>
+      </TR>
+    </TABLE>
+
+    <IMG style="position:absolute;left:87px;top:50px"
+         src=./pic/zclass.gif width=225 height=19 border=0
+         hspace=0 vspace=0 alt="Зачетный класс">
+
+    <IMG style="position:absolute; left:5px; top:10px;"
+         src=../pic/robotru.gif width=18 height=152 border=0
+         alt="">
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD colspan=2>
+          <IMG src=../pic/empty.gif width=1 height=110 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <IMG src=../pic/empty.gif width=72 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD>
+
+      <P>
+        <IMG class=tasks src=../pic/task2.gif width=200 height=68 border=0
+              hspace=0 alt="Зачетный класс">
+
+    <P>
+Нажмите кнопку <SPAN class=mark>Сброс</SPAN>, затем приступайте к
+решению.
+
+
+      <P>
+    <FORM  name=exam>
+      <P>
+      <IMG src=../pic/clear.gif width=113 height=41
+           border=0 alt="Сброс"
+           onmouseup   ="room.Ini()"
+           onmousedown ="this.src='../pic/clear2.gif'"
+           onmouseover ="this.src='../pic/clear1.gif'"
+           onmouseout  ="this.src='../pic/clear.gif'">
+
+      <P>
+      <OL type=1>
+<LI class=text>
+Какие возможности имеет редактор Блокнот?
+<BR><BR>
+
+  <TABLE  border=0 cellspacing=0 cellpadding=5>
+    <TR><TD>
+        <INPUT type=checkbox name=item1> Набор и правка многострочного текста.<BR>
+        <INPUT type=checkbox name=item1> Запись текста в файл.<BR>
+        <INPUT type=checkbox name=item1> Чтение текста из файла.<BR>
+        <INPUT type=checkbox name=item1> Полная откатка и накатка.<BR>
+        <INPUT type=checkbox name=item1> Вставка в текст рисунков.<BR>
+        <INPUT type=checkbox name=item1> Вставка текущей даты и времени.<BR>
+        <INPUT type=checkbox name=item1> Автоматическое выравнивание текста.<BR>
+        <INPUT type=checkbox name=item1> Поиск слов в тексте.<BR>
+        <INPUT type=checkbox name=item1> Проверка грамматики.<BR>
+        <INPUT type=checkbox name=item1> Выбор шрифта.<BR>
+        <INPUT type=checkbox name=item1> Печать текста.<BR>
+    </TD></TR>
+  </TABLE>
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if (this.form.item1[0].checked &&
+                      this.form.item1[1].checked &&
+                      this.form.item1[2].checked &&
+                      !this.form.item1[3].checked &&
+                      !this.form.item1[4].checked &&
+                      this.form.item1[5].checked &&
+                      !this.form.item1[6].checked &&
+                      this.form.item1[7].checked &&
+                      !this.form.item1[8].checked &&
+                      this.form.item1[9].checked &&
+                      this.form.item1[10].checked) ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(1);">
+  <INPUT class=check type=text size=14 name=result1 readonly><BR><BR>
+
+        
+
+
+        <LI class=text>
+В Блокнот введён текст (в нём нет пробелов) и задан алгоритм действий:
+<BR><BR>
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD valign=top>
+<IMG src=./pic/0601z.gif width=169 height=283 border=0
+     hspace=0 vspace=0 alt="">
+        </TD>
+        <TD valign=top>
+1. <KBD>End</KBD><BR>
+2. <KBD>Вниз</KBD><BR>
+3. Повторить 4 раза <KBD>Влево</KBD><BR>
+4. <KBD>Shift</KBD>+<KBD>Влево</KBD><BR>
+5. <KBD>Ctrl</KBD>+<KBD>C</KBD><BR>
+        </TD>
+      </TR>
+    </TABLE>
+
+Что содержит буфер обмена после выполнения алгоритма?
+<BR>
+
+  <INPUT type=text size=30 maxlength=12 name=item4
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(delEmptyRU(this.form.item4.value)=='4') ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(4);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(delEmptyRU(this.form.item4.value)=='4') ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(4);">
+  <INPUT class=check type=text size=14 name=result4 readonly><BR><BR>
+
+        <LI class=text>
+В Блокнот введён текст (в нём нет пробелов) и задан алгоритм действий:
+<BR><BR>
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD valign=top>
+<IMG src=./pic/0601z.gif width=169 height=283 border=0
+     hspace=0 vspace=0 alt="">
+        </TD>
+        <TD valign=top>
+1. Повторить 4 раза <KBD>Вниз</KBD><BR>
+2. Повторить 8 раз <KBD>Del</KBD><BR>
+3. <KBD>Shift</KBD>+<KBD>End</KBD><BR>
+4. <KBD>Ctrl</KBD>+<KBD>C</KBD><BR>
+        </TD>
+      </TR>
+    </TABLE>
+
+Что содержит буфер обмена после выполнения алгоритма?
+<BR>
+
+  <INPUT type=text size=30 maxlength=12 name=item5
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(delEmptyRU(this.form.item5.value)==')!') ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(5);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(delEmptyRU(this.form.item5.value)==')!') ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(5);">
+  <INPUT class=check type=text size=14 name=result5 readonly><BR><BR>
+
+
+        <LI class=text>
+В Блокнот введён текст (в нём нет пробелов) и задан алгоритм действий:
+<BR><BR>
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD valign=top>
+<IMG src=./pic/0601z.gif width=169 height=283 border=0
+     hspace=0 vspace=0 alt="">
+        </TD>
+        <TD valign=top>
+1. <KBD>Shift</KBD>+<KBD>Вниз</KBD><BR>
+2. <KBD>Del</KBD><BR>
+3. <KBD>End</KBD><BR>
+4. Повторить 8 раз <KBD>BS</KBD><BR>
+5. <KBD>Shift</KBD>+<KBD>Home</KBD><BR>
+6. <KBD>Ctrl</KBD>+<KBD>C</KBD><BR>
+        </TD>
+      </TR>
+    </TABLE>
+
+Что содержит буфер обмена после выполнения алгоритма?
+<BR>
+
+  <INPUT type=text size=30 maxlength=12 name=item6
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(delEmptyRU(this.form.item6.value)=='98') ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(6);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(delEmptyRU(this.form.item6.value)=='98') ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(6);">
+  <INPUT class=check type=text size=14 name=result6 readonly><BR><BR>
+
+
+        <LI class=text>
+В Блокнот введён текст (в нём нет пробелов) и задан алгоритм действий:
+<BR><BR>
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD valign=top>
+<IMG src=./pic/0601z.gif width=169 height=283 border=0
+     hspace=0 vspace=0 alt="">
+        </TD>
+        <TD valign=top>
+1. Повторить 3 раза:<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1. <KBD>Вправо</KBD><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2. <KBD>Вниз</KBD><BR>
+2. <KBD>Shift</KBD>+<KBD>Вправо</KBD><BR>
+3. <KBD>Ctrl</KBD>+<KBD>C</KBD><BR>
+        </TD>
+      </TR>
+    </TABLE>
+
+Что содержит буфер обмена после выполнения алгоритма?
+<BR>
+
+  <INPUT type=text size=30 maxlength=12 name=item7
+         onkeypress="if(event.keyCode==13)
+                     {
+                       ret = false;
+                       if(delEmptyRU(this.form.item7.value)=='/') ret = true;
+                       room.Answer = ret ? room.Yes : room.No;
+                       room.Check(7);
+                     }"><BR>
+
+  <INPUT type=button value=Проверить
+         onclick="
+                  ret = false;
+                  if(delEmptyRU(this.form.item7.value)=='/') ret = true;
+                  room.Answer = ret ? room.Yes : room.No;
+                  room.Check(7);">
+  <INPUT class=check type=text size=14 name=result7 readonly><BR><BR>
+
+
+
+      </OL>
+      <P>
+Покажите работу преподавателю.
+      </FORM>
+      <SCRIPT language=JavaScript>
+      <!--
+        var room = new CheckTasks(7,exam);
+        var i, ret;
+
+      //-->
+      </SCRIPT>
+
+
+
+
+      <P>
+      <IMG style="position:relative; left:-62px;"
+           src=../pic/podval.gif width=490 height=15 border=0
+           alt="Азы информатики RU 2000/2002 &copy; А.А.Дуванов">
+
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <NOBR>
+          <IMG src=../pic/empty.gif width=22 height=1 border=0
+               alt="" hspace=0 vspace=0>
+          <IMG src=../pic/up.gif width=35 height=35 border=0
+               alt=Вверх hspace=0 vspace=0
+               onclick="scroll(0,0)"
+               onmouseover="this.src='../pic/up_.gif'"
+               onmouseout="this.src='../pic/up.gif'">
+          </NOBR>
+        </TD>
+
+        <TD>
+      <NOBR>
+      <A href=index.htm><IMG src=../pic/home.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt="Оглавление книги"
+           onmouseover="this.src='../pic/home_.gif'"
+           onmouseout="this.src='../pic/home.gif'"></A>
+
+      <A href=06.htm><IMG src=../pic/left.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt='Урок 6. Блокнот'
+           onmouseover="this.src='../pic/left_.gif'"
+           onmouseout="this.src='../pic/left.gif'"></A>
+
+        <A href=mailto:kurs@robotland.users.botik.ru
+           onmouseover="letter.src = '../pic/letter_.gif'"
+           onmouseout ="letter.src = '../pic/letter.gif'">
+           <IMG name=letter
+                src=../pic/letter.gif width=50 height=40
+                border=0 alt="Письмо автору"></A>
+
+        <A href="javascript:void(0)"
+           onmouseover="copyr.src ='../pic/copyr_.gif'"
+           OnMouseOut ="copyr.src = '../pic/copyr.gif'"
+           onclick="CopyrRU('../')">
+           <IMG name=copyr
+                src=../pic/copyr.gif  width=50 height=40
+                border=0 alt="Об авторах"></A>
+      </NOBR>
+     </TD>
+     </TR>
+     </TABLE>
+
+  </BODY>
+</HTML>

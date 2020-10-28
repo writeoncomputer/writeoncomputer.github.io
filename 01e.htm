@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="ru">
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <META http-equiv="author" content="А.Дуванов">
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <LINK rel="stylesheet" type="text/css" href=student.css>
+    <SCRIPT language="JavaScript" src=../common.js></SCRIPT>
+    <SCRIPT language="JavaScript" src=./rs.js></SCRIPT>
+    <TITLE>В редакции "Школьной газеты" (практикум)</TITLE>
+    <SCRIPT language=JavaScript>
+    <!--
+
+var AlignItems = new Array("left", "right", "justify","center");
+
+function AlignIniRU()
+{
+ document.all['selRU'].selectedIndex=0;
+}
+
+function ChangeAlignRU()
+{
+  document.all['textRU'].style.textAlign =
+    AlignItems[document.all['selRU'].selectedIndex];
+
+}
+    //-->
+    </SCRIPT>
+  </HEAD>
+
+  <BODY bgcolor=white text=black link=blue alink=red vlink=purple
+        onload="AlignIniRU()">
+
+    <SPAN style="
+          position:absolute; left:0px; top:0px;
+          height:99px; width:100%; z-index:-1;
+          background: repeat-y rgb(0,204,255) url(../pic/fon.gif);">
+          &nbsp;
+    </SPAN>
+
+    <A href=01.htm><IMG style="position:absolute;left:40px;top:10px;"
+         src=./pic/01.gif width=504 height=35 border=0
+         hspace=0 vspace=0 alt='В редакции "Школьной газеты"'></A>
+
+
+    <TABLE style="position:absolute;left:0px;top:40px;"
+           border=0 cellspacing=0 cellpadding=0 width=100%>
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD align=right>
+          <IMG src=./pic/r.gif width=244 height=51 border=0
+               vspace=0 hspace=10 alt="">
+        </TD>
+      </TR>
+
+      <TR>
+        <TD style="width:40">
+          <IMG src=../pic/empty.gif width=40 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD colspan=2
+          ><IMG src=../pic/label.gif width=550 height=15 border=0
+               vspace=0 hspace=0 alt="Регистрационная метка"
+        ></TD>
+      </TR>
+    </TABLE>
+
+    <IMG style="position:absolute;left:87px;top:50px"
+         src=./pic/e.gif width=148 height=21 border=0
+         hspace=0 vspace=0 alt="Практикум">
+
+    <IMG style="position:absolute; left:5px; top:10px;"
+         src=../pic/robotru.gif width=18 height=152 border=0
+         alt="">
+
+    <TABLE border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD colspan=2>
+          <IMG src=../pic/empty.gif width=1 height=110 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <IMG src=../pic/empty.gif width=72 height=1 border=0
+               hspace=0 vspace=0 alt="">
+        </TD>
+        <TD>
+
+      <P>
+        <IMG class=tasks src=../pic/task3.gif width=200 height=68 border=0
+              hspace=0 alt="Практикум">
+
+      <H2>Автоматическое выравнивание</H2>
+
+      <P>
+Как браузер (программа, в которой вы работаете с учебником) умеет
+выравнивать текст, можно проверить на следующем испытательном стенде:
+
+      </P>
+    <FORM>
+    <TABLE class=out border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD>
+          <DIV class=tabl style="width:460px;padding:20px">
+             <P id=textRU style="text-align:left">
+Жила однажды в далекой деревушке маленькая прелестная девочка. Мать
+и бабушка любили ее без памяти. Бабушка сшила ей красную шапочку,
+которая была ей так к лицу, что все и стали звать девочку Красной
+Шапочкой.
+          </DIV>
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+<SELECT name=selRU onchange="ChangeAlignRU()">
+  <OPTION selected>Выровнять слева</OPTION>
+  <OPTION>Выровнять справа</OPTION>
+  <OPTION>Выровнять по ширине</OPTION>
+  <OPTION>Выровнять по центру</OPTION>
+</SELECT>
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+
+      <P>
+Заметьте, что браузер не умеет переносить слова по слогам. По крайней
+мере, это не умел делать тот браузер, в котором автор писал эти
+строки.
+
+      <H2>Редактор строки</H2>
+
+   
+
+      <P>
+Редактор строки&nbsp;&#151; это поле, в которое можно вводить символы с
+клавиатуры:
+
+      <P>
+      <FORM>
+        <INPUT type=text size=37 value=""
+               onfocus = "this.value='Вы вошли в редактор строки'"
+               onblur = "this.value=''">
+        <INPUT type=text size=1 style="visibility:hidden">
+      </FORM>
+
+     <P>
+Для входа в редактор нужно щелкнуть по нему мышкой. Попробуйте
+это сделать здесь:
+
+      <P>
+      <FORM>
+        <INPUT type=text size=37 value=""
+               onfocus = "this.value='Вы вошли в редактор строки'"
+               onblur = "this.value=''">
+        <INPUT type=text size=1 style="visibility:hidden">
+      </FORM>
+
+     <P>
+После входа в редактор строки, в нем появляется мигающая вертикальная
+черточка&nbsp;&#151; текстовый курсор. Курсор указывает место, где
+появится изображение знака, введенного с клавиатуры.
+
+     <P>
+Попробуйте написать что-нибудь. Щелчком мыши войдите в редактор и
+нажимайте клавиши на клавиатуре. При нажатии очередной клавиши курсор
+сдвигается на одну позицию вправо и указывает место, где должен
+появиться следующий символ.
+
+     </P>
+
+      <FORM>
+        <INPUT type=text size=37 value=""
+               onkeypress="if(event.keyCode==13) {alert('Enter&nbsp;&#151;конец ввода');this.blur()}">
+        <INPUT type=text size=1 style="visibility:hidden">
+        <INPUT type=reset value="Сброс">
+      </FORM>
+
+      <H3>Переключение алфавита</H3>
+
+      <P>
+
+
+
+      <P>
+Более удобно выполнять переключение алфавита при помощи клавиатурного
+аккорда <KBD>Ctrl+Shift</KBD> или <KBD>Alt(слева)+Shift</KBD> (зависит
+от настроек клавиатуры).
+
+      <H3>Переключение прописные/строчные</H3>
+
+      <P>
+      <DIV class=text>
+<IMG src=./pic/caps.gif width=100 height=100 border=0 align=left
+              hspace=10 hspace=0 alt="Клавиша Caps Lock">
+Если у вас получаются прописные буквы вместо строчных (или наоборот),
+<BR>нажмите клавишу <KBD>Caps Lock</KBD> (&#147;капс лок&#148;). Эта
+клавиша переключает режим прописные/строчные.
+</DIV>
+<BR clear=left>
+
+      <P>
+Клавиша <KBD>Caps Lock</KBD> удобна, когда нужно вводить много
+заглавных букв подряд.
+      </P>
+
+      <DIV class=text>
+<IMG src=./pic/shift.gif width=100 height=100 border=0 align=left
+              hspace=10 hspace=0 alt="Клавиша Shift">
+Когда заглавная буква нужна только одна, лучше пользоваться клавишей
+<KBD>Shift</KBD> (читается &#147;шифт&#148;, в переводе
+&#147;сдвиг&#148;, &#147;перемена&#148;).
+</DIV>
+<BR clear=left>
+
+
+      <H3>Удаление символов</H3>
+
+    <TABLE class=out border=0 cellspacing=0 cellpadding=10>
+      <TR>
+        <TD><TT>BS (<--)</TT></TD>
+        <TD>
+Удалять последний набранный символ удобно клавишей обратного пробела
+<KBD>BS</KBD>, она может обозначаться стрелкой назад в верхнем ряду цифровой клавиатуры.
+        </TD>
+      </TR>
+      <TR>
+        <TD><TT>Delete (Del)</TT></TD>
+        <TD>
+Когда нужно удалить символ в середине набора, используйте
+клавишу <KBD>Del</KBD>.
+        </TD>
+      </TR>
+    </TABLE>
+
+
+      <H3>Задания</H3>
+
+      <P>
+Нажмите кнопку <KBD>Сброс</KBD>, затем выполните задания.
+<BR><BR>
+
+      <DIV class=text>
+<IMG src=./pic/enter.gif width=100 height=100 border=0 align=left
+              hspace=10 hspace=0 alt="Клавиша Enter">
+Окончив ввод, нажимайте экранную кнопку с изогнутой стрелкой, справа от
+поля ввода или клавишу с таким же рисунком на клавиатуре (клавиша
+<KBD>Enter</KBD>, читается &#147;энтэр&#148;, называется клавишей
+ввода).</DIV>
+<BR clear=left>
+
+
+      <SCRIPT language=JavaScript>
+      <!--
+        var edTasksRU3 = new Array(
+new Array("", "Наберите: <KBD>Вася Кук</KBD>", "Вася Кук"),
+new Array("", "Наберите: <KBD>Сергей Львович Голубев</KBD>", "Сергей Львович Голубев"),
+new Array("", "Наберите: <KBD>Computer</KBD>", "Computer"),
+new Array("", "Наберите: <KBD>Фирма Microsoft</KBD>", "Фирма Microsoft"),
+new Array("", "Наберите: <KBD>1 Б = 8 б</KBD>", "1 Б = 8 б"),
+new Array("", "Наберите: <KBD>1 КБ = 1024 Б</KBD>", "1 КБ = 1024 Б"),
+new Array("", "Наберите: <KBD>kurs@robotland.botik.ru</KBD>", "kurs@robotland.botik.ru"),
+new Array("Редакторист", "Удалите лишние символы", "Редактор"),
+new Array("клаввиатурра", "Удалите лишние символы", "клавиатура"),
+new Array("р о б о т л а н д и я", "Удалите лишние символы", "роботландия")
+                                  );
+        var edstr3 = new edStrRU("edstr3",edTasksRU3)
+        edstr3.heighted = "14pt";
+        edstr3.showEdStrRU();
+      //-->
+      </SCRIPT>
+
+
+      <P>
+      <IMG style="position:relative; left:-62px;"
+           src=../pic/podval.gif width=490 height=15 border=0
+           alt="Азы информатики RU 2000/2002 &copy; А.А.Дуванов">
+
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <NOBR>
+          <IMG src=../pic/empty.gif width=22 height=1 border=0
+               alt="" hspace=0 vspace=0>
+          <IMG src=../pic/up.gif width=35 height=35 border=0
+               alt=Вверх hspace=0 vspace=0
+               onclick="scroll(0,0)"
+               onmouseover="this.src='../pic/up_.gif'"
+               onmouseout="this.src='../pic/up.gif'">
+          </NOBR>
+        </TD>
+
+        <TD>
+      <NOBR>
+      <A href=index.htm><IMG src=../pic/home.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt="Оглавление книги"
+           onmouseover="this.src='../pic/home_.gif'"
+           onmouseout="this.src='../pic/home.gif'"></A>
+
+      <A href=01.htm><IMG src=../pic/left.gif width=50 height=40 border=0
+           hspace=0 vspace=0 alt='Урок 1. В редакции "Школьной газеты"'
+           onmouseover="this.src='../pic/left_.gif'"
+           onmouseout="this.src='../pic/left.gif'"></A>
+
+        <A href=mailto:kurs@robotland.users.botik.ru
+           onmouseover="letter.src = '../pic/letter_.gif'"
+           onmouseout ="letter.src = '../pic/letter.gif'">
+           <IMG name=letter
+                src=../pic/letter.gif width=50 height=40
+                border=0 alt="Письмо автору"></A>
+
+        <A href="javascript:void(0)"
+           onmouseover="copyr.src ='../pic/copyr_.gif'"
+           OnMouseOut ="copyr.src = '../pic/copyr.gif'"
+           onclick="CopyrRU('../')">
+           <IMG name=copyr
+                src=../pic/copyr.gif  width=50 height=40
+                border=0 alt="Об авторах"></A>
+      </NOBR>
+     </TD>
+     </TR>
+     </TABLE>
+
+  </BODY>
+</HTML>
