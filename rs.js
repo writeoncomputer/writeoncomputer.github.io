@@ -1,39 +1,39 @@
-// Исполнитель Редактор строки
+// РСЃРїРѕР»РЅРёС‚РµР»СЊ Р РµРґР°РєС‚РѕСЂ СЃС‚СЂРѕРєРё
 // ---------------------------
 var picBonusRU = new Array(
-'<IMG src=./pic/prav00.gif width=56 height=60 onmouseover="this.src=\'./pic/prav01.gif\'" onmouseout="this.src=\'./pic/prav00.gif\'" border=0 alt="Незнайка">',
-'<IMG src=./pic/prav10.gif width=56 height=60 onmouseover="this.src=\'./pic/prav11.gif\'" onmouseout="this.src=\'./pic/prav10.gif\'" border=0 alt="Торопыжка">',
-'<IMG src=./pic/prav20.gif width=56 height=60 onmouseover="this.src=\'./pic/prav21.gif\'" onmouseout="this.src=\'./pic/prav20.gif\'" border=0 alt="Студент">',
-'<IMG src=./pic/prav30.gif width=56 height=60 onmouseover="this.src=\'./pic/prav31.gif\'" onmouseout="this.src=\'./pic/prav30.gif\'" border=0 alt="Профессор">'
+'<IMG src=./pic/prav00.gif width=56 height=60 onmouseover="this.src=\'./pic/prav01.gif\'" onmouseout="this.src=\'./pic/prav00.gif\'" border=0 alt="РќРµР·РЅР°Р№РєР°">',
+'<IMG src=./pic/prav10.gif width=56 height=60 onmouseover="this.src=\'./pic/prav11.gif\'" onmouseout="this.src=\'./pic/prav10.gif\'" border=0 alt="РўРѕСЂРѕРїС‹Р¶РєР°">',
+'<IMG src=./pic/prav20.gif width=56 height=60 onmouseover="this.src=\'./pic/prav21.gif\'" onmouseout="this.src=\'./pic/prav20.gif\'" border=0 alt="РЎС‚СѓРґРµРЅС‚">',
+'<IMG src=./pic/prav30.gif width=56 height=60 onmouseover="this.src=\'./pic/prav31.gif\'" onmouseout="this.src=\'./pic/prav30.gif\'" border=0 alt="РџСЂРѕС„РµСЃСЃРѕСЂ">'
                           );
 
-// Конструктор Редактора строки
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р РµРґР°РєС‚РѕСЂР° СЃС‚СЂРѕРєРё
 // ----------------------------
 function edStrRU(name,tasks)
 {
-  this.tasks     = new Array(); // массив заданий (строка ввода, задание, ответ)
-  this.name      = name;        // имя экземпляра
-  this.nameform  = name+"f";    // имя формы
-  this.edname    = "rs";        // имя поля ввода
-  this.lenname   = name+"l";    // имя поля "число заданий"
-  this.taskname  = name+"t";    // имя поля "текст задания"
-  this.bonusname = name+"b";    // имя поля "отметки о решении"
-  this.zname     = name+"z";    // имя картинки "звание"
-  this.ready     = false;       // готовность к решению
-  this.num       = 0;           // текущий номер задания
-  this.bonusmark = "";          // отметки о правильности решения задач
-  this.bonusplus = 0;           // число правильно решенных задач
+  this.tasks     = new Array(); // РјР°СЃСЃРёРІ Р·Р°РґР°РЅРёР№ (СЃС‚СЂРѕРєР° РІРІРѕРґР°, Р·Р°РґР°РЅРёРµ, РѕС‚РІРµС‚)
+  this.name      = name;        // РёРјСЏ СЌРєР·РµРјРїР»СЏСЂР°
+  this.nameform  = name+"f";    // РёРјСЏ С„РѕСЂРјС‹
+  this.edname    = "rs";        // РёРјСЏ РїРѕР»СЏ РІРІРѕРґР°
+  this.lenname   = name+"l";    // РёРјСЏ РїРѕР»СЏ "С‡РёСЃР»Рѕ Р·Р°РґР°РЅРёР№"
+  this.taskname  = name+"t";    // РёРјСЏ РїРѕР»СЏ "С‚РµРєСЃС‚ Р·Р°РґР°РЅРёСЏ"
+  this.bonusname = name+"b";    // РёРјСЏ РїРѕР»СЏ "РѕС‚РјРµС‚РєРё Рѕ СЂРµС€РµРЅРёРё"
+  this.zname     = name+"z";    // РёРјСЏ РєР°СЂС‚РёРЅРєРё "Р·РІР°РЅРёРµ"
+  this.ready     = false;       // РіРѕС‚РѕРІРЅРѕСЃС‚СЊ Рє СЂРµС€РµРЅРёСЋ
+  this.num       = 0;           // С‚РµРєСѓС‰РёР№ РЅРѕРјРµСЂ Р·Р°РґР°РЅРёСЏ
+  this.bonusmark = "";          // РѕС‚РјРµС‚РєРё Рѕ РїСЂР°РІРёР»СЊРЅРѕСЃС‚Рё СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡
+  this.bonusplus = 0;           // С‡РёСЃР»Рѕ РїСЂР°РІРёР»СЊРЅРѕ СЂРµС€РµРЅРЅС‹С… Р·Р°РґР°С‡
 
-  this.heighted  = "28pt";      // высота для текста заданий
+  this.heighted  = "28pt";      // РІС‹СЃРѕС‚Р° РґР»СЏ С‚РµРєСЃС‚Р° Р·Р°РґР°РЅРёР№
 
-  // Функции
-  this.showEdStrRU  = _showEdStrRU;  // Показать исполнителя
-  this.clearEdStrRU = _clearEdStrRU; // Сброс исполнителя
-  this.undoEdStrRU = _undoEdStrRU;   // Откатка последнего задания
-  this.enterEdStrRU = _enterEdStrRU; // Ввод пользователя
-  this.bonusRU = _bonusRU;           // Вывод картинки-бонуса
+  // Р¤СѓРЅРєС†РёРё
+  this.showEdStrRU  = _showEdStrRU;  // РџРѕРєР°Р·Р°С‚СЊ РёСЃРїРѕР»РЅРёС‚РµР»СЏ
+  this.clearEdStrRU = _clearEdStrRU; // РЎР±СЂРѕСЃ РёСЃРїРѕР»РЅРёС‚РµР»СЏ
+  this.undoEdStrRU = _undoEdStrRU;   // РћС‚РєР°С‚РєР° РїРѕСЃР»РµРґРЅРµРіРѕ Р·Р°РґР°РЅРёСЏ
+  this.enterEdStrRU = _enterEdStrRU; // Р’РІРѕРґ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+  this.bonusRU = _bonusRU;           // Р’С‹РІРѕРґ РєР°СЂС‚РёРЅРєРё-Р±РѕРЅСѓСЃР°
 
-  // Копируем задания
+  // РљРѕРїРёСЂСѓРµРј Р·Р°РґР°РЅРёСЏ
   for (var i=0; i<tasks.length; i++)
   {
     this.tasks[i]    = new Array();
@@ -44,7 +44,7 @@ function edStrRU(name,tasks)
 
 }
 
-// Сброс исполнителя
+// РЎР±СЂРѕСЃ РёСЃРїРѕР»РЅРёС‚РµР»СЏ
 // -----------------
 function _clearEdStrRU()
 {
@@ -59,7 +59,7 @@ function _clearEdStrRU()
   this.bonusplus = 0;
 }
 
-// Откатка последнего задания
+// РћС‚РєР°С‚РєР° РїРѕСЃР»РµРґРЅРµРіРѕ Р·Р°РґР°РЅРёСЏ
 // --------------------------
 function _undoEdStrRU()
 {
@@ -75,21 +75,21 @@ function _undoEdStrRU()
       this.bonusmark = this.bonusmark.substring(0,this.bonusmark.length-7);
 
 
-    // Вывод строки с отметками о правильности решения
+    // Р’С‹РІРѕРґ СЃС‚СЂРѕРєРё СЃ РѕС‚РјРµС‚РєР°РјРё Рѕ РїСЂР°РІРёР»СЊРЅРѕСЃС‚Рё СЂРµС€РµРЅРёСЏ
      eval("document.all['"+this.bonusname+"'].innerHTML=this.bonusmark");
 
-        // Вывод числа оставшихся задач
+        // Р’С‹РІРѕРґ С‡РёСЃР»Р° РѕСЃС‚Р°РІС€РёС…СЃСЏ Р·Р°РґР°С‡
         eval("document.all['"+this.lenname+"'].innerText=this.tasks.length-this.num");
 
-        // Вывод нового задания
+        // Р’С‹РІРѕРґ РЅРѕРІРѕРіРѕ Р·Р°РґР°РЅРёСЏ
           eval("document.all['"+this.taskname+"'].innerHTML=parseInt(this.num+1)+'. '+this.tasks[this.num][1]");
-        // Очистка строки ввода
+        // РћС‡РёСЃС‚РєР° СЃС‚СЂРѕРєРё РІРІРѕРґР°
         if(this.num < this.tasks.length)
           eval("document."+this.nameform+"."+this.edname+".value=this.tasks[this.num][0]");
         else
           eval("document."+this.nameform+"."+this.edname+".value=''");
 
-        // Вывод текущего звания-картинки
+        // Р’С‹РІРѕРґ С‚РµРєСѓС‰РµРіРѕ Р·РІР°РЅРёСЏ-РєР°СЂС‚РёРЅРєРё
         this.bonusRU();
 
   }
@@ -97,7 +97,7 @@ function _undoEdStrRU()
 
 
 
-// Ввод пользователя
+// Р’РІРѕРґ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 // -----------------
 function _enterEdStrRU()
 {
@@ -106,57 +106,57 @@ function _enterEdStrRU()
     if(this.num < this.tasks.length)
     {
       var str = eval("document."+this.nameform+"."+this.edname+".value");
-      if (str == "") alert("Ничего не записано!");
+      if (str == "") alert("РќРёС‡РµРіРѕ РЅРµ Р·Р°РїРёСЃР°РЅРѕ!");
       else
       {
         var znak = "&#150;";
 
-        // Проверим правильность ввода
+        // РџСЂРѕРІРµСЂРёРј РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРѕРґР°
         if (str == this.tasks[this.num][2]) {znak = "+"; this.bonusplus++;}
         this.bonusmark += znak+ " ";
 
-        // Вывод строки с отметками о правильности решения
+        // Р’С‹РІРѕРґ СЃС‚СЂРѕРєРё СЃ РѕС‚РјРµС‚РєР°РјРё Рѕ РїСЂР°РІРёР»СЊРЅРѕСЃС‚Рё СЂРµС€РµРЅРёСЏ
         eval("document.all['"+this.bonusname+"'].innerHTML=this.bonusmark");
 
         this.num++
 
-        // Вывод числа оставшихся задач
+        // Р’С‹РІРѕРґ С‡РёСЃР»Р° РѕСЃС‚Р°РІС€РёС…СЃСЏ Р·Р°РґР°С‡
         eval("document.all['"+this.lenname+"'].innerText=this.tasks.length-this.num");
 
-        // Вывод нового задания
+        // Р’С‹РІРѕРґ РЅРѕРІРѕРіРѕ Р·Р°РґР°РЅРёСЏ
         if(this.num < this.tasks.length)
           eval("document.all['"+this.taskname+"'].innerHTML=parseInt(this.num+1)+'. '+this.tasks[this.num][1]");
         else
-          eval("document.all['"+this.taskname+"'].innerHTML='<B style=\" color:red\">Все задания выполнены!</B>'");
-        // Очистка строки ввода
+          eval("document.all['"+this.taskname+"'].innerHTML='<B style=\" color:red\">Р’СЃРµ Р·Р°РґР°РЅРёСЏ РІС‹РїРѕР»РЅРµРЅС‹!</B>'");
+        // РћС‡РёСЃС‚РєР° СЃС‚СЂРѕРєРё РІРІРѕРґР°
         if(this.num < this.tasks.length)
           eval("document."+this.nameform+"."+this.edname+".value=this.tasks[this.num][0]");
         else
           eval("document."+this.nameform+"."+this.edname+".value=''");
 
-        // Вывод текущего звания-картинки
+        // Р’С‹РІРѕРґ С‚РµРєСѓС‰РµРіРѕ Р·РІР°РЅРёСЏ-РєР°СЂС‚РёРЅРєРё
         this.bonusRU();
 
       }
     }
-    else alert("Все задания выполнены!");
+    else alert("Р’СЃРµ Р·Р°РґР°РЅРёСЏ РІС‹РїРѕР»РЅРµРЅС‹!");
   }
 
 }
 
 //--------------------------------------------------------
-// Вывести оценку
+// Р’С‹РІРµСЃС‚Рё РѕС†РµРЅРєСѓ
 // --------------
-// Алгоритм определениЯ оценки:
+// РђР»РіРѕСЂРёС‚Рј РѕРїСЂРµРґРµР»РµРЅРёРЇ РѕС†РµРЅРєРё:
 //
-// 5 - ошибок нет                         0
-// 4 - ошибок меньше 2/5 от числа задач   1
-// 3 - ошибок меньше 1/2 от числа задач   2
-// 2 - в остальных случаЯх                3
+// 5 - РѕС€РёР±РѕРє РЅРµС‚                         0
+// 4 - РѕС€РёР±РѕРє РјРµРЅСЊС€Рµ 2/5 РѕС‚ С‡РёСЃР»Р° Р·Р°РґР°С‡   1
+// 3 - РѕС€РёР±РѕРє РјРµРЅСЊС€Рµ 1/2 РѕС‚ С‡РёСЃР»Р° Р·Р°РґР°С‡   2
+// 2 - РІ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°РЇС…                3
 
 function  _bonusRU()
 {
-  var bonus; // индекс картинки
+  var bonus; // РёРЅРґРµРєСЃ РєР°СЂС‚РёРЅРєРё
   var error = this.num-this.bonusplus;
 
   if (!error)                    bonus = 3;
@@ -167,7 +167,7 @@ function  _bonusRU()
   eval("document.all['"+this.zname+"'].innerHTML=picBonusRU[bonus]");
 }
 
-// Показать исполнителя
+// РџРѕРєР°Р·Р°С‚СЊ РёСЃРїРѕР»РЅРёС‚РµР»СЏ
 // --------------------
 function _showEdStrRU()
 {
@@ -175,7 +175,7 @@ function _showEdStrRU()
   var str = "<FORM name="+this.nameform+">";
   str +=    "<STYLE>";
   str +=    " .inputEd";
-  str +=    " {";  // Было 10pt; 37
+  str +=    " {";  // Р‘С‹Р»Рѕ 10pt; 37
   str +=    "   font-size:110%;";
   str +=    '   font-family: "Arial Cyr", Arial;';
   str +=    "   letter-spacing:1px;";
@@ -187,20 +187,20 @@ function _showEdStrRU()
 
   str += '<TR valign=top>';
   str +=  '<TD><IMG src=./pic/ed.gif width=310 height=41 border=0 alt=""></TD>';
-  str +=  '<TD><IMG src=./pic/clear.gif width=113 height=41 border=0 alt="Сброс" onmouseup="'+this.name+'.clearEdStrRU()" onmousedown="this.src=\'./pic/clear2.gif\'" onmouseover="this.src=\'./pic/clear1.gif\'" '+
+  str +=  '<TD><IMG src=./pic/clear.gif width=113 height=41 border=0 alt="РЎР±СЂРѕСЃ" onmouseup="'+this.name+'.clearEdStrRU()" onmousedown="this.src=\'./pic/clear2.gif\'" onmouseover="this.src=\'./pic/clear1.gif\'" '+
           'onmouseout ="this.src=\'./pic/clear.gif\'"></TD>';
   str += '</TR>';
 
   str += '<TR valign=top>';
   str +=   '<TD><INPUT class=inputEd type=text size=30 name='+this.edname+' value="" onkeypress="if(event.keyCode==13) '+this.name+'.enterEdStrRU()"></TD>';
-  str +=   '<TD><NOBR><IMG src=./pic/key5.gif width=30 height=30 border=0 alt=Ввод onmouseover="this.src=\'./pic/key5_.gif\'" onmouseout="this.src=\'./pic/key5.gif\'" onclick="'+this.name+'.enterEdStrRU()">'+
-           ' <IMG src=./pic/key6.gif width=30 height=30 border=0 alt=Откатка onmouseover="this.src=\'./pic/key6_.gif\'" onmouseout="this.src=\'./pic/key6.gif\'" onclick="'+this.name+'.undoEdStrRU()">'+
+  str +=   '<TD><NOBR><IMG src=./pic/key5.gif width=30 height=30 border=0 alt=Р’РІРѕРґ onmouseover="this.src=\'./pic/key5_.gif\'" onmouseout="this.src=\'./pic/key5.gif\'" onclick="'+this.name+'.enterEdStrRU()">'+
+           ' <IMG src=./pic/key6.gif width=30 height=30 border=0 alt=РћС‚РєР°С‚РєР° onmouseover="this.src=\'./pic/key6_.gif\'" onmouseout="this.src=\'./pic/key6.gif\'" onclick="'+this.name+'.undoEdStrRU()">'+
            '<INPUT type=text size=1 style="visibility:hidden">'+
            '<SPAN id='+this.lenname+' style="font-size:14pt;color:#BE9802;font-weight:bold;">&nbsp;</SPAN></NOBR></TD>';
   str += '</TR>';
 
   str += '<TR valign=top>';
-  str +=   '<TD colspan=2><SPAN id='+this.taskname+' style="height:'+this.heighted+';font-size:12pt;color:black;">Нажмите кнопку <B style="color:#009900">Сброс</B></SPAN></TD>';
+  str +=   '<TD colspan=2><SPAN id='+this.taskname+' style="height:'+this.heighted+';font-size:12pt;color:black;">РќР°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ <B style="color:#009900">РЎР±СЂРѕСЃ</B></SPAN></TD>';
   str += '</TR>';
   str += '<TR valign=top>';
   str +=   '<TD><BR><IMG src=./pic/line.gif width=310 height=2 border=0 alt=""><BR><SPAN id='+this.bonusname+' style=" font-size:14pt;color:#BE9802;font-weight:800;">&nbsp;</SPAN></TD>';

@@ -58,7 +58,7 @@ KBD
   background:#EEE5DB;
   padding:10px;
 
-  /* выпуклая граница */
+  /* РІС‹РїСѓРєР»Р°СЏ РіСЂР°РЅРёС†Р° */
   border-style:        solid;
   border-width:        1px;
   border-left-color:   silver;
@@ -69,7 +69,7 @@ KBD
 
 .in
 {
-  /* впуклая граница */
+  /* РІРїСѓРєР»Р°СЏ РіСЂР°РЅРёС†Р° */
 
   border-style:        solid;
   border-width:        1px;
@@ -82,7 +82,7 @@ KBD
 
 .out
 {
-  /* выпуклая граница */
+  /* РІС‹РїСѓРєР»Р°СЏ РіСЂР°РЅРёС†Р° */
   border-style:        solid;
   border-width:        1px;
   border-left-color:   silver;
@@ -92,7 +92,7 @@ KBD
   padding:10px;
 }
 
-.def /* Определение */
+.def /* РћРїСЂРµРґРµР»РµРЅРёРµ */
 {
   margin-top:10px;
   margin-bottom:10px;
