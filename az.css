@@ -1,0 +1,30 @@
+BODY
+{
+ position: absolute;
+ background: repeat-y url(./pic/fon.gif);
+ margin:0px;
+ padding:0px;
+}
+
+TABLE,TR,TD
+{
+  border-style: solid;
+  border-width: 0px;
+}
+
+.t
+{
+  border:1px solid gray;
+}
+
+
+H1,H2,H3,H4,H5,H6
+{
+  color: #009900;
+}
+
+.mark
+{
+  color: #009900;
+  font-weight:bold;
+}
